@@ -1,0 +1,25 @@
+.sweet-alert {
+    background-color: #404040;
+
+    h2 {
+        color: #fff;
+    }
+
+    .sa-button-container {
+        border-top: 1px solid #666;
+        background: #444;
+    }
+
+    button {
+        &.cancel {
+            background-color: #3b3b3b !important;
+            transition: background-color .1s, color .1s;
+
+            &:hover {
+                background-color: #303030 !important;
+                color: #fff;
+                transition: background-color .1s, color .1s;
+            }
+        }
+    }
+}

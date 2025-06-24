@@ -1,0 +1,33 @@
+#content {
+    h3 {
+        display: none;
+    }
+
+    .span100,
+    .span80,
+    .span60,
+    .span50,
+    .span40,
+    .span30,
+    .span20 {
+        display: block;
+    }
+
+    .widget {
+        display: block;
+    }
+}
+
+#logo {
+    display: none;
+}
+
+.divider {
+    display: none;
+}
+
+#redirect-label,
+#redirect-element,
+#id-label {
+    display: none;
+}

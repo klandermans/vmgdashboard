@@ -1,0 +1,98 @@
+input[type='file'] {
+    color: #666;
+    font-size: 14px;
+}
+
+input[type='text'],
+input[type='password'],
+input[type='url'],
+input[type='email'] {
+    border: 1px solid #d6d6d6;
+    border-radius: 3px;
+    padding: 12px 14px 11px;
+    max-height: 39px;
+    line-height: 14px;
+    color: #666;
+    font-family: $family;
+    font-size: 14px;
+
+    &:focus {
+        border: 1px solid #b1b1b1;
+    }
+
+    &.searchBox {
+        @include placeholder {
+            color: #b6b6b6;
+        }
+
+        @include transition(border .2s);
+        @include background-image-retina('search', 'png', no-repeat, right, 27px, 15px);
+        float: right;
+        border-radius: 30px;
+        background-color: #fff;
+        padding: 8px 40px 7px 12px;
+        width: 220px;
+        color: #999;
+
+        &:focus {
+            border: 1px solid $primary;
+            color: #666;
+        }
+
+        &:hover {
+            @include transition(border .2s);
+            border: 1px solid $primary;
+        }
+    }
+
+    &[disabled='disabled'] {
+        border-color: #e4e4e4;
+        background-color: #f8f8f8;
+    }
+}
+
+input[type='number'] {
+    border: 1px solid #d6d6d6;
+    border-radius: 2px;
+    padding: 12px 14px 11px;
+    max-height: 39px;
+    line-height: 14px;
+    color: #666;
+    font-family: $family-medium;
+    font-size: 14px;
+
+    &:focus {
+        border: 1px solid #b1b1b1;
+    }
+
+    &::-webkit-inner-spin-button {
+        display: block;
+        position: relative;
+        right: 8px;
+        cursor: pointer;
+        -webkit-appearance: none;
+        width: 12px;
+    }
+
+    &::-webkit-inner-spin-button:before,
+    &::-webkit-inner-spin-button:after {
+        position: absolute;
+        right: 0;
+        border: 1px solid #c0c0c0;
+        width: 10px;
+        height: 10px;
+        content: '';
+    }
+
+    &::-webkit-inner-spin-button:before {
+        @include background-image-retina('number-up', 'png', no-repeat, center, 4px, 3px);
+        top: 8px;
+        border-radius: 2px 2px 0 0;
+    }
+
+    &::-webkit-inner-spin-button:after {
+        @include background-image-retina('number-down', 'png', no-repeat, center, 4px, 3px);
+        top: 19px;
+        border-radius: 0 0 2px 2px;
+    }
+}

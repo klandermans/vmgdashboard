@@ -1,0 +1,123 @@
+.filter[type='checkbox'] {
+    display: none;
+
+    &:checked {
+        display: none;
+
+        & + a {
+            display: inline-block;
+
+            & + span {
+                display: inline-block;
+            }
+        }
+    }
+
+    & + a {
+        display: none;
+
+        & + span {
+            display: none;
+        }
+    }
+}
+
+a {
+    &.reportFilter {
+        display: inline-block;
+        position: relative;
+
+        margin-right: 4px;
+
+        label {
+            @include clearfix;
+
+            &:hover {
+                .label {
+                    background-color: darken($warning, 4%) !important;
+                }
+
+                .value {
+                    background-color: $warning;
+                }
+
+                .close {
+                    @include background-image-retina('tag-close-hover', 'png', no-repeat, center center, 8px, 8px);
+                    background-color: darken($warning, 4%) !important;
+
+                    cursor: cursor;
+                }
+            }
+
+            .label,
+            .value {
+                display: inline-block !important;
+                position: relative;
+                float: left;
+
+                transition: none;
+
+                background-color: #797979;
+
+                padding: 6px 10px 5px;
+
+                overflow: hidden;
+
+                text-transform: none !important;
+                text-overflow: ellipsis;
+                line-height: normal;
+                white-space: nowrap;
+                color: #fff !important;
+
+                font-family: $family-medium !important;
+                font-size: 13px !important;
+
+                box-sizing: border-box;
+            }
+
+            .value {
+                min-height: 15px;
+            }
+
+            .label {
+                border-radius: 2px 0 0 2px;
+                background-color: #636363;
+            }
+
+            .close {
+                @include background-image-retina('tag-close', 'png', no-repeat, center center, 8px, 8px);
+
+                display: block;
+                float: left;
+
+                border-radius: 0 2px 2px 0;
+                background-color: #636363 !important;
+
+                width: 26px;
+                height: 26px;
+
+                content: ' ';
+
+                pointer-events: all;
+            }
+        }
+
+        @media only screen and (max-width: 800px) {
+            margin-right: 0;
+            width: 100%;
+
+            label {
+                width: 100%;
+                box-sizing: border-box;
+
+                .label {
+                    width: calc(35% - 13px);
+                }
+
+                .value {
+                    width: calc(65% - 13px);
+                }
+            }
+        }
+    }
+}

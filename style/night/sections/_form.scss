@@ -1,0 +1,40 @@
+form {
+    .button {
+        background-color: rgba(#262626, .5);
+        border-top: 1px solid #404040;
+
+        &:first-child {
+            border-top: 1px solid #404040;
+        }
+
+        ~ .display-group {
+            border-top: 1px solid #404040;
+        }
+    }
+
+    .display-group ~ .display-group {
+        border-top: 1px solid #404040;
+    }
+
+    > .display-group {
+        border-top: 0;
+
+        fieldset {
+            &#fieldset-choice {
+                .choices {
+                    .choice {
+                        border: 1px solid #404040;
+
+                        &:hover {
+                            background-color: rgba(#fafafa, .05);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    select {
+        font-size: 14px;
+    }
+}

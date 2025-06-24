@@ -1,0 +1,26 @@
+table {
+    &.table {
+        &.invoice-overview {
+            border: 1px solid #383838;
+            background-color: #262626;
+
+            tr {
+                &:hover {
+                    td {
+                        color: #999;
+                    }
+                }
+
+                td {
+                    h6 {
+                        color: #b6b6b6;
+                    }
+                }
+            }
+
+            & ~ table {
+                border-top: 1px solid #383838;
+            }
+        }
+    }
+}

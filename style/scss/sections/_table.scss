@@ -1,0 +1,643 @@
+table {
+    &.table {
+        width: 100%;
+        white-space: nowrap;
+
+        .checkbox {
+            text-align: center;
+        }
+
+        .asset {
+            padding: 0;
+            width: 160px;
+            text-align: center;
+        }
+
+        thead {
+            background-color: #fbfbfb;
+
+            tr {
+                &:hover {
+                    background-color: transparent;
+                }
+
+                th {
+                    margin: 0;
+                    border-right: 1px solid #d6d6d6;
+                    border-bottom: 1px solid #d6d6d6;
+                    padding: 0 40px 0 20px;
+                    overflow: hidden;
+                    text-align: left;
+                    line-height: 38px;
+                    letter-spacing: normal;
+                    color: #666;
+                    font-family: $family-medium;
+                    font-size: 14px;
+                    font-weight: normal;
+
+                    &:empty {
+                        padding: 0;
+                    }
+
+                    &:last-child {
+                        border-right: 0 solid #D6D6D6;
+                    }
+
+                    &.sorter-false {
+                        &.tablesorter-header {
+                            background: transparent;
+                            cursor: auto;
+                            padding: 0 20px;
+                        }
+                    }
+
+                    &.tablesorter-header {
+                        @include background-image-retina('tablesorter', 'png', no-repeat, right, 28px, 14px);
+                        cursor: pointer;
+                    }
+
+                    &.tablesorter-headerAsc {
+                        @include background-image-retina('tablesorter-ascending', 'png', no-repeat, right, 28px, 14px);
+                        background-color: #f0f0f0 !important;
+                    }
+
+                    &.tablesorter-headerDesc {
+                        @include background-image-retina('tablesorter-descending', 'png', no-repeat, right, 28px, 14px);
+                        background-color: #f0f0f0 !important;
+                    }
+
+                    &:hover {
+                        background-color: #f4f4f4 !important;
+                    }
+                }
+            }
+
+            &.thead-clone {
+                tr {
+                    th {
+                        display: inline-block;
+                        cursor: default;
+                    }
+                }
+            }
+        }
+
+        tbody {
+            th {
+                margin: 0;
+                border-right: 1px solid #d6d6d6;
+                border-bottom: 1px solid #d6d6d6;
+                background-color: #fbfbfb;
+                padding: 0 20px;
+                text-align: left;
+                line-height: 38px;
+                letter-spacing: normal;
+                color: #666;
+                font-family: $family-medium;
+                font-size: 14px;
+                font-weight: normal;
+
+                &:last-child {
+                    border-right: 0 solid #d6d6d6;
+                }
+            }
+        }
+
+        tfoot {
+            border-top: 1px solid #d6d6d6;
+            background-color: #fbfbfb;
+
+            td {
+                padding: 0 20px;
+                height: 28px;
+                text-align: left;
+                line-height: 38px;
+                letter-spacing: normal;
+                color: #666;
+                font-family: $family-medium;
+                font-size: 14px;
+                font-weight: normal;
+
+                &.right {
+                    text-align: right;
+                }
+            }
+        }
+
+        tr {
+            border-top: 1px solid #d6d6d6;
+
+            &:first-child {
+                border-top: 0;
+            }
+
+            &:hover {
+                background-color: #fbfbfb;
+
+                td {
+                    color: #666;
+
+                    a {
+                        opacity: 1;
+                        text-decoration: underline;
+                        color: $primary;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+
+                        &.tag {
+                            color: #fff;
+                        }
+                    }
+
+                    &.open {
+                        a {
+                            @include background-image-retina($theme/open-hover, 'png', no-repeat, center, 18px, 18px);
+                        }
+                    }
+
+                    &.test {
+                        a {
+                            @include background-image-retina($theme/test-hover, 'png', no-repeat, center, 22px, 22px);
+                        }
+                    }
+
+                    &.edit {
+                        a {
+                            @include background-image-retina($theme/edit-hover, 'png', no-repeat, center, 18px, 18px);
+                        }
+                    }
+
+                    &.remove {
+                        a {
+                            @include background-image-retina($theme/remove-hover, 'png', no-repeat, center, 14px, 15px);
+                        }
+                    }
+
+                    &.copy {
+                        a {
+                            @include background-image-retina($theme/copy-hover, 'png', no-repeat, center, 18px, 18px);
+                        }
+                    }
+
+                    &.acl {
+                        a {
+                            @include background-image-retina($theme/acl-hover, 'png', no-repeat, center, 18px, 16px);
+                        }
+                    }
+
+                    &.online {
+                        a {
+                            @include background-image-retina($theme/online-hover, 'png', no-repeat, center, 13px, 16px);
+                        }
+                    }
+
+                    &.offline {
+                        a {
+                            @include background-image-retina($theme/offline-hover, 'png', no-repeat, center, 12px, 16px);
+                        }
+                    }
+
+                    &.testCode {
+                        a {
+                            @include background-image-retina($theme/testcode-hover, 'png', no-repeat, center, 22px, 12px);
+                        }
+                    }
+
+                    &.loginAs {
+                        a {
+                            @include background-image-retina($theme/loginas-hover, 'png', no-repeat, center, 14px, 18px);
+                        }
+                    }
+                }
+            }
+        }
+
+        td {
+            position: relative;
+            border-right: 1px solid #d6d6d6;
+            padding: 10px 20px;
+            line-height: 16px;
+            color: #999;
+            font-family: $family;
+            font-size: 14px;
+
+            &.brokenImage {
+                background-color: #f6f6f6;
+
+                .preloader {
+                    position: relative;
+                    height: 74px;
+                    @keyframes spin {
+                        0% {
+                            transform: rotate(0deg);
+                        }
+
+                        100% {
+                            transform: rotate(360deg);
+                        }
+                    }
+                    @keyframes pulse {
+                        50% {
+                            background: #999;
+                        }
+                    }
+
+                    .loading {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        animation: spin 1s infinite linear;
+                        margin-top: -11px;
+                        margin-left: -11px;
+                        border: 0.25rem solid rgba(#999, .2);
+                        border-radius: 50%;
+                        border-top-color: #999;
+                        width: 14px;
+                        height: 14px;
+                    }
+                }
+            }
+
+            a {
+                color: #999;
+
+                &.tag {
+                    color: #fff;
+                }
+            }
+
+            img {
+                display: block;
+            }
+
+            .green {
+                color: #44ac1c;
+            }
+
+            .red {
+                color: #da0014;
+            }
+
+            .btn {
+                margin: 0 6px 0 0;
+                background-color: transparent;
+                padding: 0;
+                line-height: 16px;
+                color: $primary;
+                font-family: $family;
+
+                &.add {
+                    border-radius: 24px;
+                    background-color: $secondary;
+                    padding: 0;
+                    width: 33px;
+                    height: 33px;
+
+                    &::before {
+                        margin: 0 0 -2px 10px;
+                    }
+
+                    &:hover {
+                        background-color: $secondaryLight;
+                    }
+                }
+            }
+
+            span {
+                &.failed,
+                &.processed,
+                &.processing,
+                &.sendingEncoding {
+                    display: inline;
+                    border-radius: 50%;
+                    width: 28px;
+                    height: 28px;
+                    font-family: $family;
+
+                    &::before {
+                        display: inline-block;
+                        margin: 0 8px -9px 0;
+                        width: 28px;
+                        height: 28px;
+                        content: '';
+                    }
+                }
+
+                &.green,
+                &.red {
+                    border: 1px solid #d6d6d6;
+                    border-radius: 4px;
+                    padding: 5px 8px;
+                    text-transform: uppercase;
+                    color: #999;
+                    font-family: $family-medium;
+                }
+
+                &.green {
+                    color: #44ac1c;
+                }
+
+                &.processed {
+                    color: #44ac1c;
+
+                    &::before {
+                        @include background-image-retina('status/processed', 'png', no-repeat, center, 28px, 28px);
+                    }
+                }
+
+                &.sendingEncoding {
+                    color: #fdad26;
+
+                    &::before {
+                        @include background-image-retina('status/encoding', 'png', no-repeat, center, 28px, 28px);
+                    }
+                }
+
+                &.processing {
+                    color: #fdad26;
+
+                    &::before {
+                        @include background-image-retina('status/processing', 'png', no-repeat, center, 28px, 28px);
+                    }
+                }
+
+                &.failed {
+                    color: #da0014;
+
+                    &::before {
+                        @include background-image-retina('status/failed', 'png', no-repeat, center, 28px, 28px);
+                    }
+                }
+            }
+
+            &:last-child {
+                border-right: 0 solid #d6d6d6;
+            }
+
+            &.right {
+                text-align: right;
+            }
+
+            span {
+                &.decrease,
+                &.increase {
+                    display: inline-block;
+                    width: 15px;
+                    height: 15px;
+                    text-indent: -99999px;
+                }
+
+                &.decrease {
+                    @include background-image-retina($theme/decrease-disabled, 'png', no-repeat, center, 15px, 15px);
+                    margin: -3px 6px -3px 0;
+                }
+
+                &.increase {
+                    @include background-image-retina($theme/increase-disabled, 'png', no-repeat, center, 15px, 15px);
+                    margin: -3px 0 -3px 9px;
+                }
+            }
+
+            a {
+                &.decrease,
+                &.increase {
+                    display: inline-block;
+                    width: 15px;
+                    height: 15px;
+                    text-indent: -99999px;
+                }
+
+                &.decrease {
+                    @include background-image-retina($theme/decrease, 'png', no-repeat, center, 15px, 15px);
+                    margin: -3px 6px -3px 0;
+
+                    &:hover {
+                        @include background-image-retina($theme/decrease-hover, 'png', no-repeat, center, 15px, 15px);
+                    }
+                }
+
+                &.increase {
+                    @include background-image-retina($theme/increase, 'png', no-repeat, center, 15px, 15px);
+                    margin: -3px 0 -3px 9px;
+
+                    &:hover {
+                        @include background-image-retina($theme/increase-hover, 'png', no-repeat, center, 15px, 15px);
+                    }
+                }
+            }
+
+            .valid {
+                color: #53b32e;
+            }
+
+            .not-valid {
+                color: $warning;
+            }
+
+            .validate {
+                a {
+                    text-decoration: underline;
+                    color: $primary;
+                }
+            }
+
+            .not-valid-tooltip {
+                display: inline-block;
+                position: relative;
+                color: $warning;
+
+                .help {
+                    @include background-image-retina('status-help', 'png', no-repeat, center center, 14px, 14px);
+                    display: inline-block;
+                    position: relative;
+                    top: 1px;
+                    margin-left: 2px;
+                    width: 14px;
+                    height: 14px;
+                }
+
+                &:hover {
+                    &::before,
+                    &::after {
+                        display: block;
+                    }
+                }
+            }
+
+            div {
+                &.progress {
+                    background-color: #ececec;
+                    width: 100%;
+                    height: 12px;
+
+                    .bar {
+                        background-color: $primary;
+                        max-width: 100%;
+                        height: 12px;
+                    }
+
+                    &.progress-success {
+                        margin-top: 3px;
+
+                        .bar {
+                            background-color: $secondary;
+                        }
+                    }
+                }
+            }
+
+            &.acl,
+            &.add,
+            &.copy,
+            &.edit,
+            &.loginAs,
+            &.offline,
+            &.online,
+            &.open,
+            &.remove,
+            &.test,
+            &.testCode {
+                padding: 0;
+                width: 40px;
+
+                &:hover {
+                    background-color: #f6f6f6;
+                }
+
+                a {
+                    display: block;
+                    transition: background-image 0.1s;
+                    opacity: 0.65;
+                    margin: 0 auto;
+                    width: 40px;
+                    height: 40px;
+                    text-indent: -9999px;
+
+                    &:hover {
+                        transition: background-image 0.1s;
+                    }
+                }
+            }
+
+            &.open {
+                a {
+                    @include background-image-retina($theme/open, 'png', no-repeat, center center, 16px, 16px);
+
+                    &:hover {
+                        @include background-image-retina($theme/open-hover, 'png', no-repeat, center center, 18px, 18px);
+                    }
+                }
+            }
+
+            &.add {
+                border-right: 1px solid $secondaryDark;
+                border-bottom: 1px solid $secondaryDark;
+                background-color: $secondary;
+
+                a {
+                    @include background-image-retina('buttons/add', 'png', no-repeat, center, 13px, 13px);
+
+                    &:hover {
+                        @include background-image-retina('buttons/add', 'png', no-repeat, center, 13px, 13px);
+                    }
+                }
+
+                &:hover {
+                    background-color: $secondaryDark;
+                }
+            }
+
+            &.test {
+                a {
+                    @include background-image-retina($theme/test, 'png', no-repeat, center center, 20px, 20px);
+
+                    &:hover {
+                        @include background-image-retina($theme/test-hover, 'png', no-repeat, center center, 22px, 22px);
+                    }
+                }
+            }
+
+            &.edit {
+                a {
+                    @include background-image-retina($theme/edit, 'png', no-repeat, center center, 16px, 16px);
+
+                    &:hover {
+                        @include background-image-retina($theme/edit-hover, 'png', no-repeat, center center, 18px, 18px);
+                    }
+                }
+            }
+
+            &.remove {
+                a {
+                    @include background-image-retina($theme/remove, 'png', no-repeat, center center, 12px, 13px);
+
+                    &:hover {
+                        @include background-image-retina($theme/remove-hover, 'png', no-repeat, center center, 14px, 15px);
+                    }
+                }
+            }
+
+            &.copy {
+                a {
+                    @include background-image-retina($theme/copy, 'png', no-repeat, center center, 16px, 16px);
+
+                    &:hover {
+                        @include background-image-retina($theme/copy-hover, 'png', no-repeat, center center, 18px, 18px);
+                    }
+                }
+            }
+
+            &.acl {
+                a {
+                    @include background-image-retina($theme/acl, 'png', no-repeat, center center, 16px, 14px);
+
+                    &:hover {
+                        @include background-image-retina($theme/acl-hover, 'png', no-repeat, center center, 18px, 16px);
+                    }
+                }
+            }
+
+            &.online {
+                a {
+                    @include background-image-retina($theme/online, 'png', no-repeat, center center, 11px, 14px);
+
+                    &:hover {
+                        @include background-image-retina($theme/online-hover, 'png', no-repeat, center center, 13px, 16px);
+                    }
+                }
+            }
+
+            &.offline {
+                a {
+                    @include background-image-retina($theme/offline, 'png', no-repeat, center center, 10px, 14px);
+
+                    &:hover {
+                        @include background-image-retina($theme/offline-hover, 'png', no-repeat, center center, 12px, 16px);
+                    }
+                }
+            }
+
+            &.testCode {
+                a {
+                    @include background-image-retina($theme/testcode, 'png', no-repeat, center center, 20px, 10px);
+
+                    &:hover {
+                        @include background-image-retina($theme/testcode-hover, 'png', no-repeat, center center, 22px, 12px);
+                    }
+                }
+            }
+
+            &.loginAs {
+                a {
+                    @include background-image-retina($theme/loginas, 'png', no-repeat, center center, 12px, 16px);
+
+                    &:hover {
+                        @include background-image-retina($theme/loginas-hover, 'png', no-repeat, center center, 14px, 18px);
+                    }
+                }
+            }
+        }
+    }
+}

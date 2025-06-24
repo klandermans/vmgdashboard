@@ -1,0 +1,30 @@
+// Settings
+$theme: themes/videoflare;
+
+// Colors
+$primary: #E91B2C;
+$primaryLight: #F7354B;
+
+$secondary: #7C5D62;
+$secondaryDark: #6A4F54;
+$secondaryLight: #8A6A6F;
+
+$dropdownBorder: #F7354B;
+
+$warning: #DE0000;
+
+// Logos
+$logo: logo;
+$logoHover: logo;
+$logoSmall: logo-small;
+
+$logoWidth: 132px;
+$logoHeight: 34px;
+
+$logoTop: 13px;
+$logoLeft: 22px;
+
+$logoSmallWidth: 34px;
+$logoSmallHeight: 34px;
+
+@import 'base';

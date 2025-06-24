@@ -1,0 +1,93 @@
+.change {
+    .widget-header {
+        background-color: transparent;
+    }
+
+    .widget-content {
+        .changelog {
+            background-color: transparent;
+
+            .no-result {
+                background-color: #3b3b3b;
+            }
+
+            .changelog-info {
+                background-color: #3b3b3b;
+                border-color: #3b3b3b;
+
+                .username {
+                    color: #999;
+                }
+
+                &.open {
+                    border-bottom: 2px solid #333;
+                    color: #fff;
+                }
+
+                &:hover {
+                    color: #ccc;
+
+                    .username {
+                        color: #ccc;
+                    }
+                }
+
+                &::after {
+                    background-color: #404040 !important
+                }
+            }
+
+            ul {
+                li {
+                    &.changelog-toggle {
+                        background-color: #3b3b3b;
+
+                        label {
+                            background-color: #333;
+                            color: #a6a6a6;
+                        }
+
+                        .change-container {
+                            ul {
+                                &.change {
+                                    .new,
+                                    .old {
+                                        label {
+                                            border: 1px solid #404040;
+                                            background-color: #262626;
+                                        }
+                                    }
+
+                                    span {
+                                        border: 1px solid #404040;
+                                        border-top: none;
+                                        background-color: #262626;
+                                        color: #aaa;
+                                    }
+                                }
+                            }
+                        }
+
+                        &.open {
+                            &::after {
+                                background-color: #333 !important;
+                            }
+                        }
+
+                        &::after {
+                            background-color: #333 !important;
+                        }
+
+                        &:hover {
+                            background-color: #444;
+
+                            &::after {
+                                background-color: #666 !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

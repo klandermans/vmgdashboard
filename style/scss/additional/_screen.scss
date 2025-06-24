@@ -1,0 +1,159 @@
+.screen {
+    #content {
+        left: 0;
+        background-color: #303030;
+        padding: 0 10px 10px;
+        width: calc(100%);
+        box-sizing: border-box;
+
+        .top-navigation {
+            display: none;
+        }
+
+        .timers {
+            @include clearfix;
+            position: absolute;
+            top: 26px;
+            right: 30px;
+            z-index: 99999;
+            line-height: 32px;
+            color: #aaa;
+            font-family: $family-medium;
+            font-size: 14px;
+
+            div {
+                float: left;
+
+                &.current {
+                    margin-left: 14px;
+                    border-radius: 15px;
+                    background-color: $primary;
+                    padding: 6px 12px 5px;
+                    line-height: normal;
+                    color: #fff;
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .span100 {
+            float: none;
+
+            &.statistics {
+                margin: 0;
+                width: 100%;
+
+                .widget {
+                    border-right: 0;
+                    border-bottom: 0;
+                    border-left: 0;
+                    padding: 10px 0 0;
+                }
+            }
+        }
+
+        #data {
+            margin: 10px 0 0;
+            border: 1px solid #333;
+            background-color: #262626;
+
+            .widget-header {
+                border-bottom: 1px solid #333;
+                text-align: left;
+
+                h3 {
+                    padding: 17px 24px 16px 0;
+                    color: #aaa;
+                    font-size: 16px;
+                }
+            }
+
+            .widget-controls {
+                border-bottom: 1px solid #333;
+                background-color: transparent;
+                min-height: 0;
+                text-align: center;
+
+                .btn {
+                    margin-right: 2px;
+                    margin-left: 2px;
+                    background-color: transparent;
+                    padding: 0 8px;
+                    line-height: 26px;
+                    color: #666;
+
+                    &.active {
+                        background-color: #fff;
+                        color: #262626;
+
+                        &:hover {
+                            background-color: #fff;
+                            color: #262626;
+                        }
+                    }
+
+                    &:hover {
+                        background-color: rgba(#fff, .1);
+                        color: #fff;
+                    }
+                }
+            }
+
+            .widget-content {
+                table {
+                    text-align: center;
+                    overflow: hidden !important;
+
+                    &.table {
+                        thead {
+                            background-color: #222;
+
+                            tr {
+                                th {
+                                    border-right: 0;
+                                    border-bottom: 1px solid #333;
+                                    background: initial;
+                                    padding: 0;
+                                    text-align: center;
+                                    line-height: 47px;
+                                    color: #fff;
+                                    font-size: 16px;
+
+                                    &:hover {
+                                        background-color: transparent !important;
+                                    }
+
+                                    &.tablesorter-headerAsc,
+                                    &.tablesorter-headerDesc {
+                                        background-color: transparent !important;
+                                    }
+                                }
+                            }
+                        }
+
+                        tr {
+                            border-top: 0;
+
+                            // &:nth-child(2n) {
+                            //     background-color: #222;
+                            // }
+
+                            td {
+                                border-right: 1px solid #333;
+                                border-bottom: 1px solid #333;
+                                padding: 12px 20px;
+                                line-height: 26px;
+                                color: #d0d0d0;
+                                font-size: 20px;
+                            }
+
+                            &:hover {
+                                background-color: transparent;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

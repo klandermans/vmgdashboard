@@ -1,0 +1,183 @@
+.widget {
+    display: inline-block;
+    position: relative;
+    margin: 20px 0 0;
+    //border: 1px solid #d6d6d6;
+    background-color: #fff;
+    width: 100%;
+    box-sizing: border-box;
+
+    h3 {
+        display: inline-block !important;
+        padding: 0 24px 0 0;
+        line-height: 26px;
+        color: #666;
+        font-family: $family-medium;
+        font-size: 20px;
+
+        @media only screen and (max-width: 768px) {
+            font-size: 18px;
+        }
+    }
+
+    .widget-form {
+        overflow: visible !important;
+    }
+
+    .widget-content {
+        overflow-x: auto;
+
+        code {
+            color: #333;
+            font-size: 14px;
+        }
+
+        &.textual {
+            p {
+                width: 100%;
+
+                & ~ p {
+                    padding: 0 20px 12px;
+                }
+            }
+        }
+
+        h6 {
+            font-size: 16px;
+            font-family: $family-medium;
+            color: rgba(#999, .5);
+            padding: 20px;
+        }
+
+        p {
+            display: inline-block;
+            margin: 0;
+            padding: 12px 20px;
+            width: auto;
+            line-height: 22px;
+            color: #999;
+            font-family: $family;
+            font-size: 14px;
+
+            a {
+                text-decoration: underline;
+                color: $primary;
+            }
+
+            &.iframe-test-player {
+                width: calc(100% - 48px);
+            }
+
+            & ~ p {
+                padding: 0 24px 24px;
+            }
+
+            &.hint {
+                position: relative;
+                margin: 0 20px 24px;
+                border: 1px solid #e8e8e8;
+                border-radius: 6px;
+                background-color: #fcfcfc;
+                padding: 10px 12px 10px 34px;
+                width: calc(100% - 40px);
+                color: #666;
+                box-sizing: border-box;
+
+                &::after {
+                    @include background-image-retina($theme/hint, 'png', no-repeat, center center, 14px, 14px);
+                    display: block;
+                    position: absolute;
+                    top: 14px;
+                    left: 12px;
+                    width: 14px;
+                    height: 14px;
+                    content: '';
+                }
+
+                @media only screen and (max-width: 1224px) {
+                    margin: 12px 20px;
+                }
+            }
+        }
+
+        .icon-circle-arrow-right {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+
+            & + a {
+                display: inline-block;
+            }
+        }
+
+        ul {
+            padding: 24px;
+
+            &.tagit {
+                padding: 0;
+            }
+
+            &.ui-sortable {
+                padding: 0;
+            }
+
+            li {
+                a {
+                    display: inline-block;
+                    transition: background-color .1s;
+                    margin: 0 0 10px;
+                    border-radius: 2px;
+                    background-color: #999;
+                    padding: 10px 12px;
+                    color: #fff;
+                    font-family: $family-medium;
+                    font-size: 14px;
+
+                    &:hover {
+                        transition: background-color .1s;
+                        background-color: $secondary;
+                    }
+                }
+            }
+        }
+
+        pre {
+            margin: 0;
+            padding: 24px;
+            line-height: 18px;
+            font-size: 14px;
+        }
+
+        #placeholder,
+        .flot-container {
+            padding: 17px 4px 19px 22px;
+            width: calc(100% - 26px);
+
+            .tickLabel {
+                color: #ccc;
+                font-family: $family-medium;
+                font-size: 12px;
+            }
+
+            .legend {
+                .legendLabel {
+                    padding: 0 0 0 4px;
+                    color: #666;
+                    font-size: 12px;
+                }
+            }
+
+            .flot-y-axis {
+                .tickLabel {
+                    margin: 0 12px 0 0;
+                }
+            }
+
+            .flot-x-axis {
+                .tickLabel {
+                    margin: 10px 0 0;
+                }
+            }
+        }
+    }
+}

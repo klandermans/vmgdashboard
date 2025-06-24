@@ -1,0 +1,30 @@
+// Settings
+$theme: themes/webisaba;
+
+// Colors
+$primary: #ED6B3A;
+$primaryLight: #EE8A6A;
+
+$secondary: #1A242F;
+$secondaryDark: #161F29;
+$secondaryLight: #222E3C;
+
+$dropdownBorder: #EE8A6A;
+
+$warning: #DE0000;
+
+// Logos
+$logo: logo;
+$logoHover: logo;
+$logoSmall: logo-small;
+
+$logoWidth: 150px;
+$logoHeight: 34px;
+
+$logoTop: 9px;
+$logoLeft: 15px;
+
+$logoSmallWidth: 32px;
+$logoSmallHeight: 22px;
+
+@import 'base';

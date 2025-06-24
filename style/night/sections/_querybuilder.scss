@@ -1,0 +1,28 @@
+.rules-group-container {
+    background-color: rgba(#262626, .5);
+    border: 1px solid #333;
+
+    .rules-group-body {
+        .rules-list {
+            .rule-container {
+                background-color: #404040;
+                border-color: transparent;
+
+                .rule-value-container {
+                    .selectize-control {
+                        .selectize-dropdown {
+                            background-color: #262626;
+                            border: 1px solid #404040;
+                            color: #aaa;
+                        }
+
+                        .selectize-input {
+                            background-color: #262626;
+                            border-color: #404040 !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

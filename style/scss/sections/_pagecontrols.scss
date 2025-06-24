@@ -1,0 +1,60 @@
+.page-controls {
+    @include clearfix;
+    margin: 0 -20px;
+
+    border-bottom: 1px solid #d6d6d6;
+    background-color: #fff;
+
+    padding: 10px 20px 5px;
+
+    width: 100%;
+
+    &:empty {
+        display: none;
+    }
+
+    .btn {
+        display: block;
+        float: left;
+        transition: background-color .1s;
+        margin: 0 4px 4px 0;
+        background-color: #999;
+
+        &:hover {
+            background-color: #666;
+            transition: background-color .1s;
+        }
+
+        &.active {
+            background-color: $primary;
+        }
+    }
+
+    form {
+        float: right;
+
+        .searchBox {
+            margin: 0 0 4px 20px;
+        }
+
+        @media only screen and (max-width: 860px) {
+            width: 100%;
+            float: left;
+
+            .searchBox {
+                margin: 10px 0 5px;
+                width: calc(100% - 54px) !important;
+            }
+        }
+    }
+
+    .page-actions {
+        float: right;
+
+        .btn {
+            &.edit {
+                background-color: $secondary;
+            }
+        }
+    }
+}

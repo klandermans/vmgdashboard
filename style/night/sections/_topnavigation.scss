@@ -1,0 +1,52 @@
+.top-navigation {
+    .options {
+        background-color: #262626 !important;
+
+        .option {
+            a {
+                &.option {
+                    background-color: #1a1a1a;
+                    border-color: #1a1a1a;
+                }
+
+                &:hover {
+                    &.option {
+                        border-color: #666;
+                    }
+                }
+            }
+
+            ul {
+                &.dropdown-menu {
+                    background-color: #303030;
+                    border-color: #404040;
+
+                    &::before {
+                        background: url(../img/night/datepicker-pointer.png);
+                        background-repeat: no-repeat;
+                        background-position: center center;
+                        background-size: 16px 8px;
+                    }
+
+                    li {
+                        &:last-child {
+                            border-top: 1px solid #404040;
+                        }
+
+                        a,
+                        .switch-container {
+                            color: #999;
+                        }
+
+                        a {
+                            &:hover {
+                                background-color: rgba(#1a1a1a, .5);
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+@mixin background-image-retina($file, $type, $repeat, $position, $width, $height) {
+    background: url('../img/' + $file + '.' + $type);
+    background-repeat: $repeat;
+    background-position: $position;
+    background-size: $width $height;
+
+    @media (-webkit-min-device-pixel-ratio: 2), (-moz-min-device-pixel-ratio: 2) {
+        & {
+            background: url('../img/' + $file + '@2x.' + $type);
+            background-repeat: $repeat;
+            background-position: $position;
+            background-size: $width $height;
+        }
+    }
+}

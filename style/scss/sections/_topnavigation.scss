@@ -1,0 +1,17 @@
+.top-navigation {
+    #menu-opener {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .options {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 10;
+        background-color: #fff;
+        padding: 12px 20px;
+    }
+}

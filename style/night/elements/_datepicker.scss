@@ -1,0 +1,107 @@
+#ui-datepicker-div,
+.comiseo-daterangepicker,
+.comiseo-daterangepicker .ui-datepicker-header .ui-datepicker-prev span #ui-datepicker-div {
+    background-color: #303030;
+    border: 1px solid #404040;
+    color: #fff;
+
+    &::before {
+        background: url(../img/night/datepicker-pointer.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 16px 8px;
+    }
+
+    table {
+        &.ui-datepicker-calendar {
+            thead {
+                border-color: #404040;
+            }
+
+            tbody {
+                tr {
+                    td {
+                        border-color: #404040;
+
+                        a {
+                            color: #999;
+
+                            &:hover {
+                                background-color: rgba(#f8f8f8, .1);
+                            }
+                        }
+
+                        &.ui-datepicker-unselectable {
+                            span {
+                                background-color: #303030;
+                                color: #666;
+
+                                &:hover {
+                                    background-color: #303030;
+                                    color: #666;
+                                }
+                            }
+                        }
+
+                        &.ui-datepicker-other-month {
+                            background-color: #262626;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .ui-datepicker-header {
+        border-color: #404040;
+
+        .ui-datepicker-next,
+        .ui-datepicker-prev {
+            span {
+                background-color: #666 !important;
+            }
+        }
+    }
+
+    .comiseo-daterangepicker-presets {
+        ul {
+            li {
+                a {
+                    &:hover {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+
+    .comiseo-daterangepicker-calendar {
+        border-color: #404040 !important;
+
+        .ui-datepicker-inline {
+            border-color: #404040 !important;
+        }
+
+        .ui-datepicker-multi {
+            .ui-datepicker-group {
+                &.ui-datepicker-group {
+                    border-color: #404040 !important;
+                }
+            }
+        }
+    }
+
+    .comiseo-daterangepicker-buttonpanel {
+        border-top: 1px solid #404040;
+
+        .ui-button {
+            &.ui-priority-secondary {
+                background-color: #3b3b3b;
+
+                &:hover {
+                    background-color: #666;
+                }
+            }
+        }
+    }
+}

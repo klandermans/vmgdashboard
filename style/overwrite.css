@@ -1,0 +1,27 @@
+html body #wrapper #content svg .nvd3 .nv-axislabel ,
+svg text {
+fill:#999999 !important;
+font-color:#666666 !important;
+
+}
+html body .nvd3 .nv-groups path.nv-line {
+
+stroke-width: 3px !important;
+}
+
+html body .nvd3 .tick text {
+font-color:#666666 !important;
+color:#666666 !important;
+}
+
+
+html body .nvd3>* {
+font-color:#666666 !important;
+color:#666666 !important;
+}
+
+
+.nvtooltip  {
+font-color:#666666 !important;
+color:#666666 !important;
+}

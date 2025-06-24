@@ -1,0 +1,215 @@
+ul {
+    &.videoBlockItems {
+        @include clearfix;
+        padding: 20px 20px 0 !important;
+
+        .videoBlockItem {
+            float: left;
+
+            margin: 0 0 21px;
+            width: 100%;
+
+            @media screen and (min-width: 480px) and (max-width: 720px) {
+                margin: 0 3% 21px 0;
+                width: 48.5%;
+
+                &:nth-child(2n) {
+                    margin: 0 0 21px;
+                }
+            }
+
+            @media screen and (min-width: 720px) and (max-width: 1024px) {
+                margin: 0 2% 21px 0;
+                width: 32%;
+
+                &:nth-child(3n) {
+                    margin: 0 0 21px;
+                }
+            }
+
+            @media screen and (min-width: 1024px) and (max-width: 1280px) {
+                margin: 0 1.5% 21px 0;
+                width: 23.875%;
+
+                &:nth-child(4n) {
+                    margin: 0 0 21px;
+                }
+            }
+
+            @media screen and (min-width: 1280px) and (max-width: 1480px) {
+                margin: 0 1% 21px 0;
+                width: 19.2%;
+
+                &:nth-child(5n) {
+                    margin: 0 0 21px;
+                }
+            }
+
+            @media screen and (min-width: 1480px) {
+                margin: 0 1% 21px 0;
+                width: 15.8%;
+
+                &:nth-child(6n) {
+                    margin: 0 0 21px;
+                }
+            }
+
+            h3 {
+                display: block !important;
+
+                border: 0;
+
+                padding: 9px 12px 0 0;
+
+                overflow: hidden;
+                text-overflow: ellipsis;
+                line-height: 20px;
+                white-space: nowrap;
+                color: #666;
+                font-family: $family-medium;
+                font-size: 14px;
+            }
+
+            span {
+                color: #999;
+                font-size: 12px;
+            }
+
+            .video {
+                position: relative;
+
+                background-color: #000;
+
+                .options,
+                .info,
+                label {
+                    position: absolute;
+                    z-index: 10;
+                }
+
+                .options {
+                    z-index: 1;
+                }
+
+                label {
+                    &.private {
+                        top: 10px;
+                        left: 10px;
+
+                        border-radius: 4px;
+                        background-color: rgba(0, 0, 0, 0.4);
+
+                        padding: 3px 6px 4px;
+
+                        text-transform: uppercase;
+                        color: #fff;
+                        font-family: $family-bold;
+                        font-size: 11px;
+                    }
+                }
+
+                .options {
+                    @include clearfix;
+
+                    top: 10px;
+                    right: 10px;
+
+                    a {
+                        display: block;
+                        float: left;
+
+                        margin: 0 0 0 4px;
+
+                        border-radius: 50%;
+                        background-color: rgba(0, 0, 0, .35) !important;
+
+                        padding: 0;
+
+                        width: 26px;
+                        height: 26px;
+
+                        &.roundDelete {
+                            @include background-image-retina('buttons/roundDelete', 'png', no-repeat, center, 10px, 10px);
+                        }
+
+                        &.roundEdit {
+                            @include background-image-retina('buttons/roundEdit', 'png', no-repeat, center, 12px, 12px);
+                        }
+
+                        &.roundAdd {
+                            @include background-image-retina('buttons/roundAdd', 'png', no-repeat, center, 12px, 12px);
+                        }
+
+                        &:hover {
+                            &.roundDelete {
+                                background-color: $warning !important;
+                            }
+
+                            &.roundEdit {
+                                background-color: $primary !important;
+                            }
+
+                            &.roundAdd {
+                                background-color: $secondary !important;
+                            }
+                        }
+                    }
+                }
+
+                .info {
+                    bottom: 0;
+
+                    background-color: rgba(0, 0, 0, .4);
+
+                    padding: 8px 10px 7px;
+
+                    width: calc(100% - 20px);
+
+                    .date,
+                    .duration {
+                        color: #fff;
+                        font-family: $family-medium;
+                        font-size: 12px;
+                    }
+
+                    .date {
+                        float: left;
+                    }
+
+                    .duration {
+                        float: right;
+                    }
+                }
+
+                a {
+                    display: block;
+                    margin: 0;
+                    padding: 0;
+
+                    figure {
+                        position: relative;
+
+                        &::before {
+                            display: block;
+
+                            padding-top: (9 / 16) * 100%;
+
+                            width: 100%;
+                            content: '';
+                        }
+
+                        img {
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            bottom: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

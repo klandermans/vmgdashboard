@@ -1,0 +1,23 @@
+#reportGenerator {
+    .widget-controls {
+        background-color: #fff;
+        height: auto;
+    }
+
+    .widget-content {
+        overflow-x: auto;
+
+        #report4export {
+            position: relative;
+
+            .chartViewHelper {
+                background-color: #303030;
+            }
+
+            .nvd3-progress-hide {
+                margin: 0 auto;
+                border-bottom: 1px solid #d6d6d6;
+            }
+        }
+    }
+}

@@ -1,0 +1,30 @@
+// Settings
+$theme: themes/videoscale;
+
+// Colors
+$primary: #31ADE1;
+$primaryLight: #42B7E8;
+
+$secondary: #EC509C;
+$secondaryDark: #E24391;
+$secondaryLight: #F15FA6;
+
+$dropdownBorder: #47B0E6;
+
+$warning: #DE0000;
+
+// Logos
+$logo: logo;
+$logoHover: logo-hover;
+$logoSmall: logo-small;
+
+$logoWidth: 44px;
+$logoHeight: 38px;
+
+$logoTop: 11px;
+$logoLeft: 9px;
+
+$logoSmallWidth: 44px;
+$logoSmallHeight: 38px;
+
+@import 'base';

@@ -1,0 +1,482 @@
+@font-face {
+  font-family: 'HelveticaNeueW01-45Ligh';
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/HelveticaNeueW01-45Ligh.woff") format("woff"); }
+
+@font-face {
+  font-family: 'HelveticaNeueW01-55Roma';
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/HelveticaNeueW01-55Roma.woff") format("woff"); }
+
+@font-face {
+  font-family: 'HelveticaNeueW01-65Medi';
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/HelveticaNeueW01-65Medi.woff") format("woff"); }
+
+@font-face {
+  font-family: 'HelveticaNeueW01-75Bold';
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/HelveticaNeueW01-75Bold.woff") format("woff"); }
+
+#content {
+  background-color: #303030;
+  border-left: 1px solid #333; }
+
+.page-controls {
+  background-color: #262626;
+  border-color: #333; }
+  .page-controls .btn {
+    background-color: #3b3b3b; }
+
+.index #wrapper .index #content .widget.signin .widget-content input[type='text'],
+.index #wrapper .index #content .widget.signin .widget-content input[type='password'] {
+  border: 1px solid #404040; }
+
+.index #wrapper .index #content .widget.signin .widget-content input[type='password'] {
+  border-top: 0; }
+
+ul.breadcrumb {
+  background-color: #262626 !important;
+  border-color: #333;
+  color: #999; }
+  ul.breadcrumb li span {
+    color: #777; }
+  ul.breadcrumb li.active {
+    color: #fff; }
+
+ul.videoBlockItems .videoBlockItem h3 {
+  color: #fff; }
+
+.change .widget-header {
+  background-color: transparent; }
+
+.change .widget-content .changelog {
+  background-color: transparent; }
+  .change .widget-content .changelog .no-result {
+    background-color: #3b3b3b; }
+  .change .widget-content .changelog .changelog-info {
+    background-color: #3b3b3b;
+    border-color: #3b3b3b; }
+    .change .widget-content .changelog .changelog-info .username {
+      color: #999; }
+    .change .widget-content .changelog .changelog-info.open {
+      border-bottom: 2px solid #333;
+      color: #fff; }
+    .change .widget-content .changelog .changelog-info:hover {
+      color: #ccc; }
+      .change .widget-content .changelog .changelog-info:hover .username {
+        color: #ccc; }
+    .change .widget-content .changelog .changelog-info::after {
+      background-color: #404040 !important; }
+  .change .widget-content .changelog ul li.changelog-toggle {
+    background-color: #3b3b3b; }
+    .change .widget-content .changelog ul li.changelog-toggle label {
+      background-color: #333;
+      color: #a6a6a6; }
+    .change .widget-content .changelog ul li.changelog-toggle .change-container ul.change .new label,
+    .change .widget-content .changelog ul li.changelog-toggle .change-container ul.change .old label {
+      border: 1px solid #404040;
+      background-color: #262626; }
+    .change .widget-content .changelog ul li.changelog-toggle .change-container ul.change span {
+      border: 1px solid #404040;
+      border-top: none;
+      background-color: #262626;
+      color: #aaa; }
+    .change .widget-content .changelog ul li.changelog-toggle.open::after {
+      background-color: #333 !important; }
+    .change .widget-content .changelog ul li.changelog-toggle::after {
+      background-color: #333 !important; }
+    .change .widget-content .changelog ul li.changelog-toggle:hover {
+      background-color: #444; }
+      .change .widget-content .changelog ul li.changelog-toggle:hover::after {
+        background-color: #666 !important; }
+
+.rules-group-container {
+  background-color: rgba(38, 38, 38, 0.5);
+  border: 1px solid #333; }
+  .rules-group-container .rules-group-body .rules-list .rule-container {
+    background-color: #404040;
+    border-color: transparent; }
+    .rules-group-container .rules-group-body .rules-list .rule-container .rule-value-container .selectize-control .selectize-dropdown {
+      background-color: #262626;
+      border: 1px solid #404040;
+      color: #aaa; }
+    .rules-group-container .rules-group-body .rules-list .rule-container .rule-value-container .selectize-control .selectize-input {
+      background-color: #262626;
+      border-color: #404040 !important; }
+
+.widget {
+  background-color: #333;
+  border: 1px solid #404040; }
+  .widget h3 {
+    color: #fff; }
+  .widget h6 {
+    color: rgba(255, 255, 255, 0.5); }
+
+.widget-wizard-steps ul.steps {
+  background-color: #303030;
+  border-bottom: none;
+  border-top: 1px solid #404040; }
+  .widget-wizard-steps ul.steps li {
+    border-color: #404040; }
+    .widget-wizard-steps ul.steps li span.number {
+      background-color: rgba(214, 214, 214, 0.15); }
+
+#reportGenerator .widget-controls,
+.widget-controls {
+  background-color: rgba(38, 38, 38, 0.5);
+  border-color: #383838; }
+  #reportGenerator .widget-controls .widget-filters .btn,
+  .widget-controls .widget-filters .btn {
+    background-color: rgba(38, 38, 38, 0.5);
+    border-left: 1px solid #333;
+    border-right: 1px solid #333;
+    border-top: 2px solid #444;
+    color: #666; }
+    #reportGenerator .widget-controls .widget-filters .btn .count,
+    .widget-controls .widget-filters .btn .count {
+      background-color: #444; }
+    #reportGenerator .widget-controls .widget-filters .btn:hover,
+    .widget-controls .widget-filters .btn:hover {
+      background-color: #333;
+      border-left: 1px solid #333;
+      border-right: 1px solid #333;
+      border-top: 2px solid #666;
+      color: #fff; }
+      #reportGenerator .widget-controls .widget-filters .btn:hover .count,
+      .widget-controls .widget-filters .btn:hover .count {
+        background-color: #666; }
+    #reportGenerator .widget-controls .widget-filters .btn.active,
+    .widget-controls .widget-filters .btn.active {
+      background-color: #333;
+      border-left: 1px solid #333;
+      border-right: 1px solid #333;
+      color: #fff; }
+      #reportGenerator .widget-controls .widget-filters .btn.active .count,
+      .widget-controls .widget-filters .btn.active .count {
+        background-color: #666; }
+      #reportGenerator .widget-controls .widget-filters .btn.active:hover,
+      .widget-controls .widget-filters .btn.active:hover {
+        border-left: 1px solid #333;
+        border-right: 1px solid #333;
+        background-color: #3b3b3b; }
+  #reportGenerator .widget-controls #reportGeneratorForm div.display-group,
+  .widget-controls #reportGeneratorForm div.display-group {
+    border-top: 1px solid #404040; }
+  #reportGenerator .widget-controls #reportGeneratorForm div .comiseo-daterangepicker-triggerbutton,
+  .widget-controls #reportGeneratorForm div .comiseo-daterangepicker-triggerbutton {
+    background: url("../img/night/dropdown-calendar-small.png");
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: 27px 26px; }
+  #reportGenerator .widget-controls #reportGeneratorForm div select,
+  .widget-controls #reportGeneratorForm div select {
+    background: url("../img/night/dropdown-arrow-filter.png");
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: 18px 26px; }
+  #reportGenerator .widget-controls #fieldset-downloadButtons .button .btn,
+  .widget-controls #fieldset-downloadButtons .button .btn {
+    background-color: #3b3b3b; }
+    #reportGenerator .widget-controls #fieldset-downloadButtons .button .btn:hover,
+    .widget-controls #fieldset-downloadButtons .button .btn:hover {
+      background-color: #666; }
+
+.widget-header {
+  border-bottom: 1px solid #404040; }
+  .widget-header input[type='text'].searchBox {
+    background-color: #2b2b2b !important; }
+
+form .button {
+  background-color: rgba(38, 38, 38, 0.5);
+  border-top: 1px solid #404040; }
+  form .button:first-child {
+    border-top: 1px solid #404040; }
+  form .button ~ .display-group {
+    border-top: 1px solid #404040; }
+
+form .display-group ~ .display-group {
+  border-top: 1px solid #404040; }
+
+form > .display-group {
+  border-top: 0; }
+  form > .display-group fieldset#fieldset-choice .choices .choice {
+    border: 1px solid #404040; }
+    form > .display-group fieldset#fieldset-choice .choices .choice:hover {
+      background-color: rgba(250, 250, 250, 0.05); }
+
+form select {
+  font-size: 14px; }
+
+table.table thead {
+  background-color: #262626; }
+  table.table thead tr th {
+    border-right: 1px solid #383838;
+    border-bottom: 1px solid #383838;
+    color: #fff; }
+    table.table thead tr th.tablesorter-header {
+      background: url("../img/night/tablesorter.png");
+      background-repeat: no-repeat;
+      background-position: right;
+      background-size: 28px 14px; }
+    table.table thead tr th.tablesorter-headerDesc {
+      background: url("../img/night/tablesorter-descending.png");
+      background-repeat: no-repeat;
+      background-position: right;
+      background-size: 28px 14px;
+      background-color: #1a1a1a !important; }
+    table.table thead tr th.tablesorter-headerAsc {
+      background: url("../img/night/tablesorter-ascending.png");
+      background-repeat: no-repeat;
+      background-position: right;
+      background-size: 28px 14px;
+      background-color: #1a1a1a !important; }
+    table.table thead tr th:hover {
+      background-color: #1a1a1a !important; }
+
+table.table tr {
+  border-top: 1px solid #383838; }
+  table.table tr:hover {
+    background-color: rgba(38, 38, 38, 0.5); }
+    table.table tr:hover td {
+      color: #fff; }
+
+table.table td {
+  border-right: 1px solid #383838; }
+  table.table td div.progress {
+    background-color: rgba(236, 236, 236, 0.25); }
+  table.table td.acl:hover, table.table td.copy:hover, table.table td.edit:hover, table.table td.loginAs:hover, table.table td.offline:hover, table.table td.online:hover, table.table td.open:hover, table.table td.remove:hover, table.table td.test:hover, table.table td.testCode:hover {
+    background-color: #262626; }
+
+#reportGenerator .widget-content #report4export .nvd3-progress-hide {
+  border-bottom: none; }
+
+#Form_ReportGeneratorAdvanced .display-group fieldset .selectedFilters,
+#Form_ReportGeneratorAdvanced .display-group fieldset .selectedGroupby {
+  border: none;
+  background-color: #3b3b3b; }
+
+#Form_ReportGeneratorAdvanced .display-group fieldset select {
+  background: url("../img/night/dropdown-arrow-filter.png");
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-size: 18px 26px; }
+
+#Form_ReportGeneratorAdvanced .display-group fieldset .comiseo-daterangepicker-triggerbutton {
+  background: url("../img/night/dropdown-calendar-small.png");
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-size: 27px 26px; }
+
+.top-navigation .options {
+  background-color: #262626 !important; }
+  .top-navigation .options .option a.option {
+    background-color: #1a1a1a;
+    border-color: #1a1a1a; }
+  .top-navigation .options .option a:hover.option {
+    border-color: #666; }
+  .top-navigation .options .option ul.dropdown-menu {
+    background-color: #303030;
+    border-color: #404040; }
+    .top-navigation .options .option ul.dropdown-menu::before {
+      background: url(../img/night/datepicker-pointer.png);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 16px 8px; }
+    .top-navigation .options .option ul.dropdown-menu li:last-child {
+      border-top: 1px solid #404040; }
+    .top-navigation .options .option ul.dropdown-menu li a,
+    .top-navigation .options .option ul.dropdown-menu li .switch-container {
+      color: #999; }
+    .top-navigation .options .option ul.dropdown-menu li a:hover {
+      background-color: rgba(26, 26, 26, 0.5);
+      color: #fff; }
+
+#menu-opener {
+  background-color: #262626 !important;
+  border-color: #333; }
+
+.sweet-alert {
+  background-color: #404040; }
+  .sweet-alert h2 {
+    color: #fff; }
+  .sweet-alert .sa-button-container {
+    border-top: 1px solid #666;
+    background: #444; }
+  .sweet-alert button.cancel {
+    background-color: #3b3b3b !important;
+    transition: background-color .1s, color .1s; }
+    .sweet-alert button.cancel:hover {
+      background-color: #303030 !important;
+      color: #fff;
+      transition: background-color .1s, color .1s; }
+
+.chosen-container .chosen-drop {
+  background-color: #262626;
+  border: 1px solid #404040;
+  border-top: none; }
+  .chosen-container .chosen-drop ul.chosen-results li.active-result {
+    color: #aaa; }
+    .chosen-container .chosen-drop ul.chosen-results li.active-result.highlighted {
+      color: #fff; }
+
+#ui-datepicker-div,
+.comiseo-daterangepicker,
+.comiseo-daterangepicker .ui-datepicker-header .ui-datepicker-prev span #ui-datepicker-div {
+  background-color: #303030;
+  border: 1px solid #404040;
+  color: #fff; }
+  #ui-datepicker-div::before,
+  .comiseo-daterangepicker::before,
+  .comiseo-daterangepicker .ui-datepicker-header .ui-datepicker-prev span #ui-datepicker-div::before {
+    background: url(../img/night/datepicker-pointer.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 16px 8px; }
+  #ui-datepicker-div table.ui-datepicker-calendar thead,
+  .comiseo-daterangepicker table.ui-datepicker-calendar thead,
+  .comiseo-daterangepicker .ui-datepicker-header .ui-datepicker-prev span #ui-datepicker-div table.ui-datepicker-calendar thead {
+    border-color: #404040; }
+  #ui-datepicker-div table.ui-datepicker-calendar tbody tr td,
+  .comiseo-daterangepicker table.ui-datepicker-calendar tbody tr td,
+  .comiseo-daterangepicker .ui-datepicker-header .ui-datepicker-prev span #ui-datepicker-div table.ui-datepicker-calendar tbody tr td {
+    border-color: #404040; }
+    #ui-datepicker-div table.ui-datepicker-calendar tbody tr td a,
+    .comiseo-daterangepicker table.ui-datepicker-calendar tbody tr td a,
+    .comiseo-daterangepicker .ui-datepicker-header .ui-datepicker-prev span #ui-datepicker-div table.ui-datepicker-calendar tbody tr td a {
+      color: #999; }
+      #ui-datepicker-div table.ui-datepicker-calendar tbody tr td a:hover,
+      .comiseo-daterangepicker table.ui-datepicker-calendar tbody tr td a:hover,
+      .comiseo-daterangepicker .ui-datepicker-header .ui-datepicker-prev span #ui-datepicker-div table.ui-datepicker-calendar tbody tr td a:hover {
+        background-color: rgba(248, 248, 248, 0.1); }
+    #ui-datepicker-div table.ui-datepicker-calendar tbody tr td.ui-datepicker-unselectable span,
+    .comiseo-daterangepicker table.ui-datepicker-calendar tbody tr td.ui-datepicker-unselectable span,
+    .comiseo-daterangepicker .ui-datepicker-header .ui-datepicker-prev span #ui-datepicker-div table.ui-datepicker-calendar tbody tr td.ui-datepicker-unselectable span {
+      background-color: #303030;
+      color: #666; }
+      #ui-datepicker-div table.ui-datepicker-calendar tbody tr td.ui-datepicker-unselectable span:hover,
+      .comiseo-daterangepicker table.ui-datepicker-calendar tbody tr td.ui-datepicker-unselectable span:hover,
+      .comiseo-daterangepicker .ui-datepicker-header .ui-datepicker-prev span #ui-datepicker-div table.ui-datepicker-calendar tbody tr td.ui-datepicker-unselectable span:hover {
+        background-color: #303030;
+        color: #666; }
+    #ui-datepicker-div table.ui-datepicker-calendar tbody tr td.ui-datepicker-other-month,
+    .comiseo-daterangepicker table.ui-datepicker-calendar tbody tr td.ui-datepicker-other-month,
+    .comiseo-daterangepicker .ui-datepicker-header .ui-datepicker-prev span #ui-datepicker-div table.ui-datepicker-calendar tbody tr td.ui-datepicker-other-month {
+      background-color: #262626; }
+  #ui-datepicker-div .ui-datepicker-header,
+  .comiseo-daterangepicker .ui-datepicker-header,
+  .comiseo-daterangepicker .ui-datepicker-header .ui-datepicker-prev span #ui-datepicker-div .ui-datepicker-header {
+    border-color: #404040; }
+    #ui-datepicker-div .ui-datepicker-header .ui-datepicker-next span,
+    #ui-datepicker-div .ui-datepicker-header .ui-datepicker-prev span,
+    .comiseo-daterangepicker .ui-datepicker-header .ui-datepicker-next span,
+    .comiseo-daterangepicker .ui-datepicker-header .ui-datepicker-prev span,
+    .comiseo-daterangepicker .ui-datepicker-header .ui-datepicker-prev span #ui-datepicker-div .ui-datepicker-header .ui-datepicker-next span,
+    .comiseo-daterangepicker .ui-datepicker-header .ui-datepicker-prev span #ui-datepicker-div .ui-datepicker-header .ui-datepicker-prev span {
+      background-color: #666 !important; }
+  #ui-datepicker-div .comiseo-daterangepicker-presets ul li a:hover,
+  .comiseo-daterangepicker .comiseo-daterangepicker-presets ul li a:hover,
+  .comiseo-daterangepicker .ui-datepicker-header .ui-datepicker-prev span #ui-datepicker-div .comiseo-daterangepicker-presets ul li a:hover {
+    color: #fff; }
+  #ui-datepicker-div .comiseo-daterangepicker-calendar,
+  .comiseo-daterangepicker .comiseo-daterangepicker-calendar,
+  .comiseo-daterangepicker .ui-datepicker-header .ui-datepicker-prev span #ui-datepicker-div .comiseo-daterangepicker-calendar {
+    border-color: #404040 !important; }
+    #ui-datepicker-div .comiseo-daterangepicker-calendar .ui-datepicker-inline,
+    .comiseo-daterangepicker .comiseo-daterangepicker-calendar .ui-datepicker-inline,
+    .comiseo-daterangepicker .ui-datepicker-header .ui-datepicker-prev span #ui-datepicker-div .comiseo-daterangepicker-calendar .ui-datepicker-inline {
+      border-color: #404040 !important; }
+    #ui-datepicker-div .comiseo-daterangepicker-calendar .ui-datepicker-multi .ui-datepicker-group.ui-datepicker-group,
+    .comiseo-daterangepicker .comiseo-daterangepicker-calendar .ui-datepicker-multi .ui-datepicker-group.ui-datepicker-group,
+    .comiseo-daterangepicker .ui-datepicker-header .ui-datepicker-prev span #ui-datepicker-div .comiseo-daterangepicker-calendar .ui-datepicker-multi .ui-datepicker-group.ui-datepicker-group {
+      border-color: #404040 !important; }
+  #ui-datepicker-div .comiseo-daterangepicker-buttonpanel,
+  .comiseo-daterangepicker .comiseo-daterangepicker-buttonpanel,
+  .comiseo-daterangepicker .ui-datepicker-header .ui-datepicker-prev span #ui-datepicker-div .comiseo-daterangepicker-buttonpanel {
+    border-top: 1px solid #404040; }
+    #ui-datepicker-div .comiseo-daterangepicker-buttonpanel .ui-button.ui-priority-secondary,
+    .comiseo-daterangepicker .comiseo-daterangepicker-buttonpanel .ui-button.ui-priority-secondary,
+    .comiseo-daterangepicker .ui-datepicker-header .ui-datepicker-prev span #ui-datepicker-div .comiseo-daterangepicker-buttonpanel .ui-button.ui-priority-secondary {
+      background-color: #3b3b3b; }
+      #ui-datepicker-div .comiseo-daterangepicker-buttonpanel .ui-button.ui-priority-secondary:hover,
+      .comiseo-daterangepicker .comiseo-daterangepicker-buttonpanel .ui-button.ui-priority-secondary:hover,
+      .comiseo-daterangepicker .ui-datepicker-header .ui-datepicker-prev span #ui-datepicker-div .comiseo-daterangepicker-buttonpanel .ui-button.ui-priority-secondary:hover {
+        background-color: #666; }
+
+.ui-sortable .ui-state-default {
+  background-color: #444;
+  border: 1px solid #444; }
+  .ui-sortable .ui-state-default::before {
+    background: url("../img/night/sortable-default.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 6px 12px;
+    border-right: 1px solid #363636; }
+
+input[type='text'],
+input[type='password'],
+input[type='url'],
+input[type='email'],
+input[type='number'],
+textarea,
+select,
+.comiseo-daterangepicker-triggerbutton,
+.chosen-choices {
+  background-color: #262626 !important;
+  border-color: #404040 !important;
+  color: #aaa !important; }
+  input[type='text'].searchBox,
+  input[type='password'].searchBox,
+  input[type='url'].searchBox,
+  input[type='email'].searchBox,
+  input[type='number'].searchBox,
+  textarea.searchBox,
+  select.searchBox,
+  .comiseo-daterangepicker-triggerbutton.searchBox,
+  .chosen-choices.searchBox {
+    background-color: #3b3b3b;
+    border-color: #3b3b3b;
+    color: #b6b6b6; }
+    input[type='text'].searchBox:focus,
+    input[type='password'].searchBox:focus,
+    input[type='url'].searchBox:focus,
+    input[type='email'].searchBox:focus,
+    input[type='number'].searchBox:focus,
+    textarea.searchBox:focus,
+    select.searchBox:focus,
+    .comiseo-daterangepicker-triggerbutton.searchBox:focus,
+    .chosen-choices.searchBox:focus {
+      color: #fff; }
+
+.comiseo-daterangepicker-triggerbutton,
+select {
+  background: url("../img/night/dropdown-arrow-small.png");
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-size: 23px 31px; }
+
+table.table.invoice-overview {
+  border: 1px solid #383838;
+  background-color: #262626; }
+  table.table.invoice-overview tr:hover td {
+    color: #999; }
+  table.table.invoice-overview tr td h6 {
+    color: #b6b6b6; }
+  table.table.invoice-overview ~ table {
+    border-top: 1px solid #383838; }
+
+.tippy-tooltip {
+  background-color: rgba(76, 76, 76, 0.9); }
+
+.tippy-popper[x-placement^=top] [x-arrow] {
+  border-top: 7px solid rgba(76, 76, 76, 0.9); }
+
+.tippy-popper[x-placement^=top] [x-arrow].arrow-small {
+  border-top: 5px solid rgba(76, 76, 76, 0.9); }
+
+.tippy-popper[x-placement^=top] [x-arrow].arrow-big {
+  border-top: 10px solid rgba(76, 76, 76, 0.9); }

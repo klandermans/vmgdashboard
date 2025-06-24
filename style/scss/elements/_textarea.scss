@@ -1,0 +1,15 @@
+textarea {
+    border: 1px solid #d6d6d6;
+    border-radius: 2px;
+
+    padding: 12px 14px 11px;
+
+    line-height: 22px;
+    color: #666;
+    font-family: $family;
+    font-size: 14px;
+
+    &:focus {
+        border: 1px solid #b1b1b1;
+    }
+}

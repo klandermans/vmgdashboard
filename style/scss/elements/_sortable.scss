@@ -1,0 +1,54 @@
+.ui-sortable {
+    &:empty {
+        &::after {
+            display: block;
+            color: #666;
+            font-size: 14px;
+            content: 'Please select columns';
+            background-color: #f2f2f2;
+            padding: 13px 14px;
+        }
+    }
+
+    .ui-state-default {
+        @include transition(background-color .1s, border .1s);
+        position: relative;
+        margin: 4px 0;
+        border: 1px solid darken(#999, 4%);
+        background-color: #999;
+        padding: 8px 10px 8px 30px;
+        color: #fff;
+        font-family: $family-medium;
+        font-size: 14px;
+
+        &:first-child {
+            margin: 0 0 4px;
+        }
+
+        &::before {
+            @include background-image-retina('sortable-default', 'png', no-repeat, center center, 6px, 12px);
+            @include transition(border-right .1s);
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-right: 1px solid darken(#999, 4%);
+            width: 22px;
+            height: 32px;
+            content: '';
+        }
+
+        &:hover {
+            @include transition(background-color .1s, border .1s);
+            border: 1px solid darken(#666, 4%);
+            background-color: #666;
+            cursor: ns-resize;
+
+            &::before {
+                @include background-image-retina('sortable', 'png', no-repeat, center center, 6px, 12px);
+                @include transition(border-right .1s);
+                border-right: 1px solid darken(#666, 4%);
+            }
+        }
+    }
+}

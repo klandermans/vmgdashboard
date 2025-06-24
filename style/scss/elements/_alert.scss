@@ -1,0 +1,47 @@
+.alert-block {
+    @include clearfix;
+
+    padding: 24px;
+
+    color: #999;
+    font-family: $family;
+    font-size: 14px;
+
+    .alert {
+        @include background-image-retina($theme/warning-close, 'png', no-repeat, center, 24px, 24px);
+
+        display: inline-block;
+
+        border: 0;
+        background-color: transparent;
+
+        width: 24px;
+        height: 36px;
+
+        text-indent: -999999px;
+    }
+
+    .message {
+        display: inline-block;
+
+        margin: 0 0 0 11px;
+
+        h4 {
+            display: block;
+
+            margin: 0;
+            padding: 0;
+
+            color: #666;
+            font-family: $family-medium;
+            font-size: 18px;
+            font-weight: normal;
+        }
+
+        span {
+            display: block;
+
+            margin: 5px 0 0;
+        }
+    }
+}

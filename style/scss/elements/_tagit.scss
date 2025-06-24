@@ -1,0 +1,94 @@
+input {
+    &.tagit-hidden-field {
+        display: none;
+    }
+}
+
+ul {
+    &.tagit {
+        display: inline-block;
+
+        border: 1px solid #d6d6d6;
+        border-radius: 2px;
+        background-color: #fff;
+
+        padding: 10px !important;
+
+        width: 100%;
+
+        box-sizing: border-box;
+
+        li {
+            display: inline-block;
+            position: relative;
+
+            span {
+                &.tagit-label {
+                    display: inline-block;
+                    margin: 2px;
+
+                    border-radius: 18px;
+                    background-color: $primary;
+
+                    padding: 5px 30px 5px 12px;
+
+                    text-transform: lowercase;
+                    line-height: normal;
+                    color: #FFF;
+                }
+            }
+
+            a {
+                &.tagit-close {
+                    @include background-image-retina('tag-close', 'png', no-repeat, center center, 8px, 8px);
+
+                    display: inline-block !important;
+
+                    position: absolute;
+                    top: 2px;
+                    right: 2px;
+
+                    margin: 0;
+
+                    cursor: pointer;
+
+                    padding: 0;
+                    width: 29px;
+                    height: 29px;
+
+                    &:hover {
+                        @include background-image-retina('tag-close-hover', 'png', no-repeat, center center, 8px, 8px);
+                    }
+
+                    .text-icon,
+                    .ui-icon {
+                        display: none;
+                    }
+                }
+            }
+
+            &.tagit-new {
+                margin: 0 -10px;
+
+                width: calc(100% + 20px);
+
+                input {
+                    margin: 10px 0 0;
+
+                    border: 0;
+                    border-top: 1px solid #d6d6d6;
+                    border-radius: 0;
+
+                    padding: 10px 12px 0;
+
+                    width: calc(100% - 24px) !important;
+
+                    line-height: 32px;
+                    color: #666;
+                    font-family: $family-medium;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}

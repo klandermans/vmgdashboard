@@ -1,0 +1,30 @@
+// Settings
+$theme: themes/default;
+
+// Colors
+$primary: #2EA5E3;
+$primaryLight: #3CB1ED;
+
+$secondary: #FFAE00;
+$secondaryDark: #F1A400;
+$secondaryLight: #FFB924;
+
+$dropdownBorder: #47B0E6;
+
+$warning: #DE0000;
+
+// Logos
+$logo: logo;
+$logoHover: logo-hover;
+$logoSmall: logo-small;
+
+$logoWidth: 147px;
+$logoHeight: 31px;
+
+$logoTop: 14px;
+$logoLeft: 18px;
+
+$logoSmallWidth: 27px;
+$logoSmallHeight: 31px;
+
+@import 'base';

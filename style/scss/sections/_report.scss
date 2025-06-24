@@ -1,0 +1,103 @@
+.reportBody {
+    padding: 25px;
+    max-width: 1000px;
+    background-color: #fff;
+
+    & * {
+        font-family: arial;
+        font-size: 10pt;
+    }
+
+    br {
+        display: block !important;
+    }
+
+    h1 {
+        margin-top: 50px;
+        margin-bottom: 25px;
+        font-size: 20pt;
+    }
+
+    h2 {
+        margin-top: 0;
+        color: #888;
+        font-size: 15pt;
+    }
+
+    h3 {
+        padding: 0 !important;
+        font-size: 11pt;
+    }
+
+    .reportBodyHead {
+        td {
+            font-size: 9pt;
+            line-height: 13pt;
+        }
+    }
+
+    .address {
+        line-height: 13pt;
+    }
+
+    .info {
+        font-size: 9pt;
+    }
+
+    .report {
+        position: relative;
+        margin-top: 50px;
+        margin-bottom: 25px;
+
+        tr {
+            .bold {
+                font-weight: bold !important;
+            }
+        }
+
+        td {
+            padding: 3px;
+            max-width: 200px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        td,
+        th {
+            border-bottom-width: 1px;
+            border-bottom-style: solid;
+            border-bottom-color: #ccc;
+            text-align: right;
+        }
+    }
+
+    .total {
+        margin-top: 25px;
+        margin-bottom: 25px;
+
+        td {
+            padding: 3px;
+        }
+    }
+
+    .totalRow {
+        td {
+            border-top-width: 4px;
+            border-top-style: double;
+            border-top-color: #ccc;
+        }
+    }
+
+    .right {
+        text-align: right;
+    }
+
+    .left {
+        text-align: left !important;
+    }
+
+    .invoiceDate {
+        margin-top: 25px;
+    }
+}

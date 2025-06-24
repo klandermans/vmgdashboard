@@ -1,0 +1,380 @@
+div {
+    .navbar {
+        display: inline-block;
+        position: fixed;
+        // transition: width .2s;
+        z-index: 0;
+        background-color: #262626;
+        width: 62px;
+        height: 100%;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        ul {
+            &.nav {
+                display: inline-block;
+                margin: 59px 0 0;
+                padding: 0;
+                height: 100%;
+                list-style: none;
+
+                li {
+                    position: relative;
+                    box-sizing: border-box;
+
+                    &.logo {
+                        display: block;
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        z-index: 99999;
+                        border-top: 0 solid #232323;
+                        border-bottom: 1px solid #333;
+                        background-color: #262626;
+                        padding: 0;
+
+                        h4 {
+                            padding: 0;
+
+                            a {
+                                @include background-image-retina($theme/$logoSmall, 'png', no-repeat, center, $logoSmallWidth, $logoSmallHeight);
+                                display: block;
+                                margin: 0;
+                                padding: 14px 0;
+                                width: 62px;
+                                height: 31px;
+
+                                &.active {
+                                    border-left: 0 solid $primary;
+                                    background-color: transparent !important;
+                                }
+
+                                &:hover {
+                                    @include background-image-retina($theme/$logoSmall, 'png', no-repeat, center, $logoSmallWidth, $logoSmallHeight);
+                                    border-left: 0 solid $primary;
+                                }
+                            }
+                        }
+
+                        + li {
+                            padding-top: 10px;
+                        }
+                    }
+
+                    h4 {
+                        display: block;
+                        margin: 0;
+                        padding: 0 0 0 20px;
+
+                        a {
+                            display: block;
+                        }
+                    }
+
+                    a {
+                        display: block;
+                        padding: 2px 10px 0;
+
+                        span {
+                            display: block;
+                            outline: 0;
+                            border-radius: 4px;
+                            width: 42px;
+                            height: 42px;
+                            text-indent: -99999px;
+                            color: #888;
+                            font-family: $family-medium;
+                            font-size: 14px;
+                        }
+
+                        &.active {
+                            span {
+                                background-color: #1a1a1a !important;
+                                color: #fff;
+                            }
+
+                            &:hover {
+                                span {
+                                    background-color: #1a1a1a !important;
+                                    cursor: default;
+                                    color: #fff;
+                                }
+                            }
+                        }
+
+                        &:hover {
+                            span {
+                                color: #fff;
+                            }
+                        }
+                    }
+
+                    &.active,
+                    &.open,
+                    &:hover {
+                        &.dashboard {
+                            a {
+                                span {
+                                    @include background-image-retina('menu/dashboard-hover', 'png', no-repeat, 12px 15px, 18px, 12px);
+                                    background-color: rgba(#1a1a1a, .55) !important;
+                                }
+                            }
+                        }
+
+                        &.root {
+                            a {
+                                span {
+                                    @include background-image-retina('menu/root-hover', 'png', no-repeat, 12px 16px, 18px, 12px);
+                                    background-color: rgba(#1a1a1a, .55) !important;
+                                }
+                            }
+                        }
+
+                        &.reporting {
+                            a {
+                                span {
+                                    @include background-image-retina('menu/reporting-hover', 'png', no-repeat, 12px 13px, 18px, 16px);
+                                    background-color: rgba(#1a1a1a, .55) !important;
+                                }
+                            }
+                        }
+
+                        &.directDemand {
+                            a {
+                                span {
+                                    @include background-image-retina('menu/directdemand-hover', 'png', no-repeat, 12px 16px, 18px, 10px);
+                                    background-color: rgba(#1a1a1a, .55) !important;
+                                }
+                            }
+                        }
+
+                        &.openRtb {
+                            a {
+                                span {
+                                    @include background-image-retina('menu/rtb-hover', 'png', no-repeat, 12px 15px, 18px, 13px);
+                                    background-color: rgba(#1a1a1a, .55) !important;
+                                }
+                            }
+                        }
+
+                        &.publishers {
+                            a {
+                                span {
+                                    @include background-image-retina('menu/publishers-hover', 'png', no-repeat, 12px 14px, 18px, 15px);
+                                    background-color: rgba(#1a1a1a, .55) !important;
+                                }
+                            }
+                        }
+
+                        &.exchange {
+                            a {
+                                span {
+                                    @include background-image-retina('menu/exchange-hover', 'png', no-repeat, 12px 14px, 18px, 15px);
+                                    background-color: rgba(#1a1a1a, .55) !important;
+                                }
+                            }
+                        }
+
+                        &.cms {
+                            a {
+                                span {
+                                    @include background-image-retina('menu/cms-hover', 'png', no-repeat, 12px 14px, 18px, 15px);
+                                    background-color: rgba(#1a1a1a, .55) !important;
+                                }
+                            }
+                        }
+
+                        &.channels {
+                            a {
+                                span {
+                                    @include background-image-retina('menu/channels-hover', 'png', no-repeat, 12px 14px, 18px, 15px);
+                                    background-color: rgba(#1a1a1a, .55) !important;
+                                }
+                            }
+                        }
+
+                        &.commisionstatement {
+                            &.eur {
+                                a {
+                                    span {
+                                        @include background-image-retina('menu/invoices-hover', 'png', no-repeat, 13px 13px, 14px, 17px);
+                                        background-color: rgba(#1a1a1a, .55) !important;
+                                    }
+                                }
+                            }
+
+                            &.gbp {
+                                a {
+                                    span {
+                                        @include background-image-retina('menu/pound-hover', 'png', no-repeat, 15px 12px, 12px, 18px);
+                                        background-color: rgba(#1a1a1a, .55) !important;
+                                    }
+                                }
+                            }
+
+                            &.usd {
+                                a {
+                                    span {
+                                        @include background-image-retina('menu/dollar-hover', 'png', no-repeat, 16px 12px, 10px, 18px);
+                                        background-color: rgba(#1a1a1a, .55) !important;
+                                    }
+                                }
+                            }
+                        }
+
+                        &.help {
+                            a {
+                                span {
+                                    @include background-image-retina('menu/help-hover', 'png', no-repeat, 12px 12px, 18px, 18px);
+                                    background-color: rgba(#1a1a1a, .55) !important;
+                                }
+                            }
+                        }
+
+                        &.status {
+                            a {
+                                span {
+                                    @include background-image-retina('menu/status-hover', 'png', no-repeat, 12px 12px, 18px, 18px);
+                                    background-color: rgba(#1a1a1a, .55) !important;
+                                }
+                            }
+                        }
+
+                        &.settings {
+                            a {
+                                span {
+                                    @include background-image-retina('menu/settings-hover', 'png', no-repeat, 12px 12px, 18px, 18px);
+                                    background-color: rgba(#1a1a1a, .55) !important;
+                                }
+                            }
+                        }
+                    }
+
+                    &.dashboard {
+                        a {
+                            span {
+                                @include background-image-retina('menu/dashboard', 'png', no-repeat, 12px 15px, 18px, 12px);
+                            }
+                        }
+                    }
+
+                    &.root {
+                        a {
+                            span {
+                                @include background-image-retina('menu/root', 'png', no-repeat, 12px 16px, 18px, 12px);
+                            }
+                        }
+                    }
+
+                    &.reporting {
+                        a {
+                            span {
+                                @include background-image-retina('menu/reporting', 'png', no-repeat, 12px 13px, 18px, 16px);
+                            }
+                        }
+                    }
+
+                    &.directDemand {
+                        a {
+                            span {
+                                @include background-image-retina('menu/directdemand', 'png', no-repeat, 12px 16px, 18px, 10px);
+                            }
+                        }
+                    }
+
+                    &.openRtb {
+                        a {
+                            span {
+                                @include background-image-retina('menu/rtb', 'png', no-repeat, 12px 15px, 18px, 13px);
+                            }
+                        }
+                    }
+
+                    &.publishers {
+                        a {
+                            span {
+                                @include background-image-retina('menu/publishers', 'png', no-repeat, 12px 14px, 18px, 15px);
+                            }
+                        }
+                    }
+
+                    &.exchange {
+                        a {
+                            span {
+                                @include background-image-retina('menu/exchange', 'png', no-repeat, 12px 14px, 18px, 15px);
+                            }
+                        }
+                    }
+
+                    &.cms {
+                        a {
+                            span {
+                                @include background-image-retina('menu/cms', 'png', no-repeat, 12px 14px, 18px, 15px);
+                            }
+                        }
+                    }
+
+                    &.channels {
+                        a {
+                            span {
+                                @include background-image-retina('menu/channels', 'png', no-repeat, 12px 12px, 18px, 18px);
+                            }
+                        }
+                    }
+
+                    &.commisionstatement {
+                        &.eur {
+                            a {
+                                span {
+                                    @include background-image-retina('menu/invoices', 'png', no-repeat, 13px 13px, 14px, 17px);
+                                }
+                            }
+                        }
+
+                        &.gbp {
+                            a {
+                                span {
+                                    @include background-image-retina('menu/pound-hover', 'png', no-repeat, 15px 12px, 12px, 18px);
+                                }
+                            }
+                        }
+
+                        &.usd {
+                            a {
+                                span {
+                                    @include background-image-retina('menu/dollar', 'png', no-repeat, 16px 12px, 10px, 18px);
+                                }
+                            }
+                        }
+                    }
+
+                    &.help {
+                        a {
+                            span {
+                                @include background-image-retina('menu/help', 'png', no-repeat, 12px 12px, 18px, 18px);
+                            }
+                        }
+                    }
+
+                    &.status {
+                        a {
+                            span {
+                                @include background-image-retina('menu/status', 'png', no-repeat, 12px 12px, 18px, 18px);
+                            }
+                        }
+                    }
+
+                    &.settings {
+                        a {
+                            span {
+                                @include background-image-retina('menu/settings', 'png', no-repeat, 12px 12px, 18px, 18px);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,102 @@
+.widget-wizard-steps {
+    + form {
+        .button {
+            .label {
+                display: none;
+            }
+        }
+    }
+
+    ul {
+        &.steps {
+            @include clearfix;
+            margin: 0;
+            background-color: rgba(#f5f5f5, .5);
+            padding: 0;
+            list-style: none;
+            border-bottom: 1px solid #d6d6d6;
+
+            li {
+                float: left;
+                width: 25%;
+                height: 44px;
+                padding: 13px 0;
+                text-align: center;
+                font-size: 14px;
+                color: #ccc;
+                font-family: $family-medium;
+                border-right: 1px solid #d6d6d6;
+                box-sizing: border-box;
+
+                @media only screen and (max-width: 1520px) {
+                    width: 22%;
+
+                    .title {
+                        display: none;
+                    }
+                }
+
+                .number {
+                    display: inline-block;
+                    padding: 3px 0 4px;
+                    margin: -2px 4px 0 0;
+                    width: 22px;
+                    font-size: 12px;
+                    background-color: #d6d6d6;
+                    border-radius: 12px;
+                    font-family: $family-bold;
+                    color: #fff;
+                }
+
+                &:last-child {
+                    border-right: none;
+                }
+
+                &.done {
+                    color: #999;
+
+                    .number {
+                        background-color: #ababab;
+                    }
+
+                    &:hover {
+                        background-color: #fff;
+                        cursor: pointer;
+                    }
+                }
+
+                &.active {
+                    position: relative;
+                    background-color: $primary;
+                    color: #fff;
+
+                    .number {
+                        background-color: #f5f5f5;
+                        color: #666;
+                    }
+
+                    &::after {
+                        display: block;
+                        position: absolute;
+                        top: 0;
+                        right: -8px;
+                        content: '';
+                        width: 0;
+                        height: 0;
+                        border-style: solid;
+                        border-width: 22px 0 22px 8px;
+                        border-color: transparent transparent transparent $primary;
+                    }
+
+                    @media only screen and (max-width: 1440px) {
+                        width: 34%;
+
+                        .title {
+                            display: inline-block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

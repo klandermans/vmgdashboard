@@ -1,0 +1,30 @@
+// Settings
+$theme: themes/publicitas;
+
+// Colors
+$primary: #009BDA;
+$primaryLight: #00A3E6;
+
+$secondary: #158952;
+$secondaryDark: #14804D;
+$secondaryLight: #179559;
+
+$dropdownBorder: #0FA4E4;
+
+$warning: #DE0000;
+
+// Logos
+$logo: logo;
+$logoHover: logo-hover;
+$logoSmall: logo-small;
+
+$logoWidth: 136px;
+$logoHeight: 37px;
+
+$logoTop: 13px;
+$logoLeft: 19px;
+
+$logoSmallWidth: 28px;
+$logoSmallHeight: 32px;
+
+@import 'base';

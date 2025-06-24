@@ -1,0 +1,79 @@
+table {
+    &.table {
+        thead {
+            background-color: #262626;
+
+            tr {
+                th {
+                    border-right: 1px solid #383838;
+                    border-bottom: 1px solid #383838;
+                    color: #fff;
+
+                    &.tablesorter-header {
+                        background: url("../img/night/tablesorter.png");
+                        background-repeat: no-repeat;
+                        background-position: right;
+                        background-size: 28px 14px;
+                    }
+
+                    &.tablesorter-headerDesc {
+                        background: url("../img/night/tablesorter-descending.png");
+                        background-repeat: no-repeat;
+                        background-position: right;
+                        background-size: 28px 14px;
+                        background-color: #1a1a1a !important;
+                    }
+
+                    &.tablesorter-headerAsc {
+                        background: url("../img/night/tablesorter-ascending.png");
+                        background-repeat: no-repeat;
+                        background-position: right;
+                        background-size: 28px 14px;
+                        background-color: #1a1a1a !important;
+                    }
+
+                    &:hover {
+                        background-color: #1a1a1a !important;
+                    }
+                }
+            }
+        }
+
+        tr {
+            border-top: 1px solid #383838;
+
+            &:hover {
+                background-color: rgba(#262626, .5);
+
+                td {
+                    color: #fff;
+                }
+            }
+        }
+
+        td {
+            border-right: 1px solid #383838;
+
+            div {
+                &.progress {
+                    background-color: rgba(#ececec, .25);
+                }
+            }
+
+            &.acl,
+            &.copy,
+            &.edit,
+            &.loginAs,
+            &.offline,
+            &.online,
+            &.open,
+            &.remove,
+            &.test,
+            &.testCode {
+                &:hover {
+                    background-color: #262626;
+                }
+            }
+        }
+    }
+}

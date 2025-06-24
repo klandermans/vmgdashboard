@@ -1,0 +1,82 @@
+#reportGenerator .widget-controls,
+.widget-controls {
+    background-color: rgba(#262626, .5);
+    border-color: #383838;
+
+    .widget-filters {
+        .btn {
+            background-color: rgba(#262626, .5);
+            border-left: 1px solid #333;
+            border-right: 1px solid #333;
+            border-top: 2px solid #444;
+            color: #666;
+
+            .count {
+                background-color: #444;
+            }
+
+            &:hover {
+                background-color: #333;
+                border-left: 1px solid #333;
+                border-right: 1px solid #333;
+                border-top: 2px solid #666;
+                color: #fff;
+
+                .count {
+                    background-color: #666;
+                }
+            }
+
+            &.active {
+                background-color: #333;
+                border-left: 1px solid #333;
+                border-right: 1px solid #333;
+                color: #fff;
+
+                .count {
+                    background-color: #666;
+                }
+
+                &:hover {
+                    border-left: 1px solid #333;
+                    border-right: 1px solid #333;
+                    background-color: #3b3b3b;
+                }
+            }
+        }
+    }
+
+    #reportGeneratorForm {
+        div {
+            &.display-group {
+                border-top: 1px solid #404040;
+            }
+
+            .comiseo-daterangepicker-triggerbutton {
+                background: url("../img/night/dropdown-calendar-small.png");
+                background-repeat: no-repeat;
+                background-position: center right;
+                background-size: 27px 26px;
+            }
+
+            select {
+                background: url("../img/night/dropdown-arrow-filter.png");
+                background-repeat: no-repeat;
+                background-position: center right;
+                background-size: 18px 26px;
+            }
+        }
+    }
+
+    #fieldset-downloadButtons {
+        .button {
+            .btn {
+                background-color: #3b3b3b;
+
+                &:hover {
+                    background-color: #666;
+                }
+            }
+        }
+    }
+}

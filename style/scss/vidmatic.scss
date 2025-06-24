@@ -1,0 +1,30 @@
+// Settings
+$theme: themes/vidmatic;
+
+// Colors
+$primary: #007DC5;
+$primaryLight: #0097EE;
+
+$secondary: #00AEEF;
+$secondaryDark: #0097D0;
+$secondaryLight: #00BAFF;
+
+$dropdownBorder: #EE8A6A;
+
+$warning: #DE0000;
+
+// Logos
+$logo: logo;
+$logoHover: logo;
+$logoSmall: logo-small;
+
+$logoWidth: 128px;
+$logoHeight: 25px;
+
+$logoTop: 17px;
+$logoLeft: 18px;
+
+$logoSmallWidth: 26px;
+$logoSmallHeight: 25px;
+
+@import 'base';

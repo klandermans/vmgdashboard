@@ -1,0 +1,22 @@
+.index {
+    #wrapper {
+        .index {
+            #content {
+                .widget {
+                    &.signin {
+                        .widget-content {
+                            input[type='text'],
+                            input[type='password'] {
+                                border: 1px solid #404040;
+                            }
+
+                            input[type='password'] {
+                                border-top: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

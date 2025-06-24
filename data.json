@@ -1,0 +1,54 @@
+[
+  {
+    "id": 1,
+    "dsp": "DSP One",
+    "campaignName": "Spring Launch",
+    "type": "deal",
+    "numberOfPo": 2,
+    "impressionsYesterday": 3520,
+    "grossRevenueYesterday": 120.50,
+    "impression": 50000,
+    "grossRevenue": 1500.00,
+    "startDate": "2024-01-01",
+    "endDate": "2024-03-01"
+  },
+  {
+    "id": 2,
+    "dsp": "DSP Two",
+    "campaignName": "Summer Promo",
+    "type": "direct",
+    "numberOfPo": 3,
+    "impressionsYesterday": 1050,
+    "grossRevenueYesterday": 40.10,
+    "impression": 12000,
+    "grossRevenue": 300.00,
+    "startDate": "2024-04-01",
+    "endDate": "2024-06-30"
+  },
+  {
+    "id": 3,
+    "dsp": "DSP Three",
+    "campaignName": "Autumn Sale",
+    "type": "direct",
+    "numberOfPo": 1,
+    "impressionsYesterday": 850,
+    "grossRevenueYesterday": 25.00,
+    "impression": 8200,
+    "grossRevenue": 180.75,
+    "startDate": "2024-09-01",
+    "endDate": "2024-10-15"
+  },
+  {
+    "id": 4,
+    "dsp": "DSP Four",
+    "campaignName": "Holiday Blast",
+    "type": "deal",
+    "numberOfPo": 4,
+    "impressionsYesterday": 2100,
+    "grossRevenueYesterday": 65.00,
+    "impression": 30500,
+    "grossRevenue": 980.00,
+    "startDate": "2024-11-15",
+    "endDate": "2024-12-31"
+  }
+]

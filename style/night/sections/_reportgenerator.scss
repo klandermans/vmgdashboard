@@ -1,0 +1,35 @@
+#reportGenerator {
+    .widget-content {
+        #report4export {
+            .nvd3-progress-hide {
+                border-bottom: none;
+            }
+        }
+    }
+}
+
+#Form_ReportGeneratorAdvanced {
+    .display-group {
+        fieldset {
+            .selectedFilters,
+            .selectedGroupby {
+                border: none;
+                background-color: #3b3b3b;
+            }
+
+            select {
+                background: url("../img/night/dropdown-arrow-filter.png");
+                background-repeat: no-repeat;
+                background-position: center right;
+                background-size: 18px 26px;
+            }
+
+            .comiseo-daterangepicker-triggerbutton {
+                background: url("../img/night/dropdown-calendar-small.png");
+                background-repeat: no-repeat;
+                background-position: center right;
+                background-size: 27px 26px;
+            }
+        }
+    }
+}

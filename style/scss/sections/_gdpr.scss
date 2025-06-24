@@ -1,0 +1,421 @@
+.gdpr {
+    #wrapper {
+        .gdpr {
+            .breadcrumb {
+                display: none !important;
+            }
+
+            #content {
+                left: 0;
+                background-color: #1f1f1f;
+                background-image: url('../img/world-map.png');
+                background-repeat: no-repeat;
+                background-position: 280px 80px;
+                background-size: 2190px 1042px;
+                padding: 0;
+                width: 100%;
+
+                .subtitle,
+                .title,
+                h2,
+                th {
+                    color: #666;
+                    text-align: center;
+                    margin: 10px;
+                }
+
+                p {
+                    color: #666;
+                    width: 100%;
+                }
+
+                .widget {
+                    position: absolute;
+                    top: 100px;
+                    left: 50%;
+                    margin: 0 0 100px -460px;
+                    border: 0;
+                    background-color: transparent;
+                    width: 920px;
+
+                    @media only screen and (max-width: 1024px) {
+                        position: relative;
+                        top: 0;
+                        left: 0;
+                        margin: 0;
+                        width: 100%;
+                    }
+
+                    .widget-header {
+                        padding: 0;
+                        border-bottom: 0;
+
+                        .logo {
+                            border-radius: 12px 12px 0 0;
+                            background: #f9f9f9 url("../img/logo-dashboard.png") no-repeat 36px center;
+                            border-bottom: 1px solid rgba(#d6d6d6, .5);
+                            background-size: 164px 49px;
+                            width: inherit;
+                            height: 100px;
+
+                            @media only screen and (max-width: 1024px) {
+                                border-radius: 0;
+                            }
+                        }
+                    }
+
+                    span {
+                        display: block;
+                        margin: 22px 0 0;
+                        text-align: center;
+                        text-decoration: none;
+                        color: #666;
+                        font-family: $family;
+                        font-size: 14px;
+                        font-weight: normal;
+
+                        a {
+                            text-decoration: none;
+                            color: $primary;
+                        }
+                    }
+
+                    .widget-content {
+                        border-radius: 0 0 12px 12px;
+                        background: #fff;
+
+                        h1 {
+                            padding: 10px 0 21px;
+                            font-size: 24px;
+                            color: #666;
+                            text-align: center;
+                        }
+
+                        h2 {
+                            margin-top: 24px;
+                            font-size: 18px;
+                            font-family: $family-medium;
+                        }
+
+                        .cursive {
+                            font-style: italic;
+                        }
+
+                        .center {
+                            text-align: center;
+                        }
+
+                        .underline {
+                            text-decoration: underline;
+                        }
+
+                        .padding-bottom-0 {
+                            padding-bottom: 0 !important;
+                        }
+
+                        ol,
+                        ul {
+                            display: block;
+                            margin: 0;
+                            padding: 12px 80px 12px 80px;
+                            width: auto;
+                            margin-top: 6px;
+                            margin-bottom: 20px;
+                            line-height: 26px;
+                            color: #666;
+                            font-family: $family;
+                            font-size: 16px;
+
+                            li {
+                                margin-bottom: 10px;
+                            }
+                        }
+
+                        .download {
+                            @include clearfix;
+                            margin: 20px 0 40px !important;
+
+                            .btn {
+                                float: right;
+                            }
+                        }
+
+                        .content {
+                            padding: 36px;
+
+                            @media only screen and (max-width: 1024px) {
+                                padding: 14px;
+                            }
+
+                            div {
+                                margin-left: auto;
+                                margin-right: auto;
+
+                                p {
+                                    padding: 0 0 20px 0;
+                                    font-size: 16px;
+                                    line-height: 26px;
+                                    text-align: center;
+
+                                    &.confirmation {
+                                        font-family: $family-medium;
+                                    }
+                                }
+
+                                .contract {
+                                    border: 1px solid #d6d6d6;
+                                    border-radius: 0;
+                                    margin: 0;
+                                    padding: 20px;
+                                    width: calc(100% - 42px);
+                                    background-color: #fff;
+                                    height: 500px;
+                                    overflow: hidden;
+                                    overflow-y: scroll;
+
+                                    br {
+                                        display: initial;
+                                    }
+
+                                    .title {
+                                        font-size: 18px;
+                                        text-align: left;
+                                    }
+
+                                    .subtitle {
+                                        margin: 20px 0 0;
+                                        font-family: $family-medium;
+                                        text-align: left;
+                                    }
+
+                                    .appendix {
+                                        margin: 5px 0;
+                                        line-height: 22px;
+                                        font-family: $family;
+                                        font-size: 16px;
+                                    }
+
+                                    p {
+                                        padding: 12px 0;
+                                        text-align: left;
+
+                                        &#last {
+                                            display: none;
+                                        }
+                                    }
+
+                                    strong {
+                                        font-family: $family-medium;
+                                        font-weight: normal;
+                                    }
+
+                                    table {
+                                        width: 100%;
+                                        margin: 0 0 38px;
+
+                                        th {
+                                            padding: 10px;
+                                            vertical-align: top;
+                                            text-align: left;
+                                            font-size: 14px;
+                                            font-weight: normal;
+                                            font-family: $family-medium;
+                                            line-height: 20px;
+
+                                            &:first-child {
+                                                width: 140px;
+                                            }
+                                        }
+
+                                        td {
+                                            padding: 10px;
+                                            vertical-align: top;
+                                            font-size: 14px;
+                                            line-height: 20px;
+
+                                            p {
+                                                padding: 0;
+                                            }
+
+                                            ol,
+                                            ul,
+                                            p {
+                                                font-size: 14px;
+                                                line-height: 20px;
+                                            }
+
+                                            ol,
+                                            ul {
+                                                margin: 10px 0 0;
+                                            }
+                                        }
+                                    }
+
+                                    ul {
+                                        padding: 0;
+                                        display: block;
+
+                                        li {
+                                            margin-bottom: 0;
+                                        }
+
+                                        &.bullets {
+                                            padding-left: 15px;
+                                            list-style: disc;
+                                        }
+                                    }
+                                }
+
+                                .bottom-like {
+                                    margin: 14px 0 36px;
+                                }
+                            }
+                        }
+
+                        table {
+                            margin: 0 0 38px;
+                            width: 100%;
+                            color: #666;
+                            font-family: $family;
+                            background-color: rgba(#d6d6d6, .2);
+
+                            thead {
+                                font-family: $family;
+                                font-weight: normal;
+                                color: #666;
+
+                                th {
+                                    text-align: left;
+                                    padding: 10px 6px 4px;
+
+                                    &:first-child {
+                                        padding-left: 12px;
+                                    }
+
+                                    &:last-child {
+                                        padding-right: 12px;
+                                    }
+                                }
+                            }
+
+                            td {
+                                padding: 10px 6px;
+
+                                &:first-child {
+                                    padding-left: 12px;
+                                }
+
+                                &:last-child {
+                                    padding-right: 12px;
+                                }
+                            }
+
+                            p {
+                                padding: 0 0 5px;
+                            }
+
+                            ol {
+                                padding: 0 0 0 20px;
+                            }
+                        }
+
+                        form {
+                            background-color: rgba(#d6d6d6, .2);
+                            transition: background-color 0.2s;
+                            border: 0;
+                            border-radius: 2px;
+                            text-decoration: none;
+                            line-height: normal;
+                            color: #fff;
+                            font-family: $family-medium;
+                            font-size: 18px;
+                            font-weight: normal;
+
+                            .alert-block {
+                                display: none;
+                            }
+
+                            ul {
+                                &.errors {
+                                    padding: 5px 2px;
+                                    color: #FF0000;
+                                }
+                            }
+
+                            > .display-group {
+                                border: none;
+
+                                fieldset {
+                                    padding: 0;
+                                }
+
+                                & ~ .display-group {
+                                    border: none;
+                                }
+                            }
+
+                            .button {
+                                border: 0;
+                                margin-top: 16px;
+                                padding: 14px 20px;
+                                width: calc(50% - 40px);
+                                float: left;
+                                background-color: rgba(#999, .1);
+                            }
+
+                            table {
+                                display: none;
+                            }
+
+                            input[type='text'] {
+                                background-color: #fff !important;
+                                border-color: #d6d6d6 !important;
+                            }
+
+                            input[type='submit'] {
+                                &.btn-error {
+                                    float: left;
+                                    background-color: #ccc;
+
+                                    &:hover {
+                                        transition: background-color 0.1s;
+                                        background-color: #666;
+                                        color: #fff;
+                                    }
+                                }
+
+                                &.btn-success {
+                                    float: right;
+                                    background: $secondary;
+
+                                    &:hover {
+                                        transition: background-color 0.1s;
+                                        background-color: $secondaryDark;
+                                        color: #fff;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .widget-footer {
+                        padding: 21px 0 20px;
+                        text-align: center;
+                        color: #666;
+                        font-family: $family-medium;
+                        font-size: 14px;
+                        font-weight: normal;
+
+                        a {
+                            color: $primary;
+
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

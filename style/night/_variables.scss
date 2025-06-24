@@ -1,0 +1,32 @@
+$family: 'HelveticaNeueW01-55Roma', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$family-bold: 'HelveticaNeueW01-75Bold', 'HelveticaNeue-Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$family-medium: 'HelveticaNeueW01-65Medi', 'HelveticaNeue-Medium', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$family-light: 'HelveticaNeueW01-45Ligh', 'HelveticaNeue-Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+@font-face {
+    font-family: 'HelveticaNeueW01-45Ligh';
+    font-weight: normal;
+    font-style: normal;
+    src: url('../fonts/HelveticaNeueW01-45Ligh.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'HelveticaNeueW01-55Roma';
+    font-weight: normal;
+    font-style: normal;
+    src: url('../fonts/HelveticaNeueW01-55Roma.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'HelveticaNeueW01-65Medi';
+    font-weight: normal;
+    font-style: normal;
+    src: url('../fonts/HelveticaNeueW01-65Medi.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'HelveticaNeueW01-75Bold';
+    font-weight: normal;
+    font-style: normal;
+    src: url('../fonts/HelveticaNeueW01-75Bold.woff') format('woff');
+}

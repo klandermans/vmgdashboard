@@ -1,0 +1,494 @@
+.statistics {
+    .widget {
+        @include clearfix;
+        margin-top: 0;
+        border-top: 0;
+        border-right: 0;
+        border-bottom: 1px solid #333;
+        border-left: 0;
+        background-color: #303030;
+        padding: 20px;
+
+        .stats-filters {
+            @include clearfix;
+            margin-bottom: 12px;
+            background-color: #3b3b3b;
+            padding: 8px 10px 4px;
+
+            .filters {
+                @include clearfix;
+                float: left;
+                margin-right: 8px;
+
+                a {
+                    outline: 0;
+
+                    &.filter {
+                        display: block;
+                        float: left;
+                        margin: 0 4px 4px 0;
+                        border-radius: 2px;
+                        background-color: #262626;
+                        padding: 7px 10px 6px;
+                        color: #aaa;
+                        font-family: $family-medium;
+                        font-size: 13px;
+
+                        &:hover {
+                            color: #fff;
+                        }
+
+                        &.active {
+                            background-color: $primary;
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+
+            .goto {
+                float: right;
+                padding: 0 10px 0 0;
+
+                a {
+                    display: inline-block;
+                    position: relative;
+                    margin: 0 0 4px 9px;
+                    padding: 7px 10px 6px 0;
+                    color: #aaa;
+                    font-family: $family-medium;
+                    font-size: 13px;
+
+                    &:hover {
+                        text-decoration: underline;
+                        color: #fff;
+
+                        &::after {
+                            @include background-image-retina('goto-hover', 'png', no-repeat, center center, 5px, 8px);
+                        }
+                    }
+
+                    &::after {
+                        @include background-image-retina('goto', 'png', no-repeat, center center, 5px, 8px);
+                        display: inline-block;
+                        margin-left: 6px;
+                        width: 5px;
+                        height: 8px;
+                        content: ' ';
+                    }
+                }
+                @media only screen and (max-width: 860px) {
+                    float: left;
+                }
+            }
+        }
+
+        .stats {
+            @include clearfix;
+            border: 1px solid #333;
+            background-color: #262626;
+            padding: 12px 0;
+            width: 100%;
+            box-sizing: border-box;
+
+            &[count='0'] {
+                background-color: #303030;
+
+                &::after {
+                    display: block;
+                    text-align: center;
+                    color: #666;
+                    content: 'Sorry, no statistics could be found.';
+                }
+            }
+
+            &[count='6'] {
+                .period {
+                    width: 16.6%;
+
+                    &:nth-child(6) {
+                        border-right: 0;
+                    }
+                }
+            }
+
+            .period {
+                float: left;
+                border-right: 1px solid #3b3b3b;
+                padding: 16px 20px;
+                width: 25%;
+                box-sizing: border-box;
+
+                &:last-child {
+                    border-right: 0;
+                }
+
+                .amount,
+                .impressions,
+                .periodName,
+                label {
+                    display: block;
+                    font-weight: normal;
+                }
+
+                label {
+                    color: #aaa;
+                    font-family: $family-bold;
+                    font-size: 14px;
+
+                    &.down,
+                    &.equal,
+                    &.up {
+                        &::after {
+                            display: inline-block;
+                            position: absolute;
+                            margin-left: 6px;
+                            content: '';
+                        }
+                    }
+
+                    &.down,
+                    &.up {
+                        &::after {
+                            margin-top: 6px;
+                            width: 7px;
+                            height: 6px;
+                        }
+                    }
+
+                    &.up {
+                        &::after {
+                            @include background-image-retina('statistics/up', 'png', no-repeat, center, 7px, 6px);
+                        }
+                    }
+
+                    &.down {
+                        &::after {
+                            @include background-image-retina('statistics/down', 'png', no-repeat, center, 7px, 6px);
+                        }
+                    }
+
+                    &.equal {
+                        &::after {
+                            @include background-image-retina('statistics/equal', 'png', no-repeat, center, 6px, 2px);
+                            margin-top: 8px;
+                            width: 6px;
+                            height: 2px;
+                        }
+                    }
+                }
+
+                .amount {
+                    margin: 7px 0 5px;
+                    color: #fff;
+                    font-family: $family;
+                    font-size: 36px;
+
+                    span {
+                        font-size: 20px;
+                    }
+                    @media only screen and (max-width: 768px) {
+                        font-size: 32px;
+                    }
+                }
+
+                .ecpm,
+                .impressions,
+                .periodName,
+                .ratio {
+                    color: #666;
+                    font-family: $family-bold;
+                    font-size: 12px;
+                }
+
+                .ecpm,
+                .ratio {
+                    float: right;
+                }
+
+                .impressions,
+                .periodName {
+                    float: left;
+                    text-transform: uppercase;
+                }
+            }
+
+            &.campaign {
+                .period {
+                    padding: 13px 20px 17px;
+
+                    label {
+                        display: none;
+                    }
+
+                    .amount {
+                        margin: 0 0 10px;
+                        font-family: $family;
+                        font-size: 32px;
+                    }
+
+                    &.click,
+                    &.complete,
+                    &.firstquartile,
+                    &.impression,
+                    &.midpoint,
+                    &.start,
+                    &.thirdquartile {
+                        .periodName {
+                            position: relative;
+
+                            &::before {
+                                display: inline-block;
+                                position: absolute;
+                                left: 0;
+                                content: ' ';
+                            }
+                        }
+                    }
+
+                    &.impression,
+                    &.start {
+                        .periodName {
+                            padding-left: 20px;
+
+                            &::before {
+                                @include background-image-retina('start', 'png', no-repeat, center center, 10px, 12px);
+                                top: 2px;
+                                width: 10px;
+                                height: 12px;
+                            }
+                        }
+                    }
+
+                    &.firstquartile,
+                    &.midpoint,
+                    &.thirdquartile {
+                        .periodName {
+                            padding-left: 22px;
+
+                            &::before {
+                                top: 1px;
+                                width: 14px;
+                                height: 14px;
+                            }
+                        }
+                    }
+
+                    &.firstquartile {
+                        .periodName {
+                            &::before {
+                                @include background-image-retina('firstquartile', 'png', no-repeat, center center, 14px, 14px);
+                            }
+                        }
+                    }
+
+                    &.midpoint {
+                        .periodName {
+                            &::before {
+                                @include background-image-retina('midpoint', 'png', no-repeat, center center, 14px, 14px);
+                            }
+                        }
+                    }
+
+                    &.thirdquartile {
+                        .periodName {
+                            &::before {
+                                @include background-image-retina('thirdquartile', 'png', no-repeat, center center, 14px, 14px);
+                            }
+                        }
+                    }
+
+                    &.complete {
+                        .periodName {
+                            padding-left: 20px;
+
+                            &::before {
+                                @include background-image-retina('complete', 'png', no-repeat, center center, 12px, 12px);
+                                top: 2px;
+                                width: 12px;
+                                height: 12px;
+                            }
+                        }
+                    }
+
+                    &.click {
+                        .periodName {
+                            padding-left: 16px;
+
+                            &::before {
+                                @include background-image-retina('click', 'png', no-repeat, center center, 9px, 14px);
+                                top: 1px;
+                                width: 9px;
+                                height: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+            @media screen and (min-width: 768px) and (max-width: 1366px) {
+                padding: 12px;
+
+                &[count='6'] {
+                    .period {
+                        border-bottom: 1px solid #333;
+                        width: 50%;
+
+                        &:nth-last-child(-n+2) {
+                            border-bottom: 0;
+                        }
+                    }
+                }
+
+                .period {
+                    width: 50%;
+
+                    &:nth-child(1),
+                    &:nth-child(2) {
+                        border-bottom: 1px solid #333;
+                    }
+
+                    &:nth-child(3) {
+                        clear: left;
+                    }
+
+                    &:nth-child(2n) {
+                        border-right: 0;
+                    }
+                }
+            }
+            @media screen and (max-width: 768px) {
+                padding: 12px;
+
+                &[count='6'] {
+                    .period {
+                        width: 100%;
+                    }
+                }
+
+                .period {
+                    clear: both;
+                    border-right: 0;
+                    border-bottom: 1px solid #333;
+                    width: 100%;
+
+                    &:last-child {
+                        border-bottom: 0;
+                    }
+                }
+            }
+        }
+
+        .graph {
+            float: left;
+            padding: 0 24px;
+            width: 50%;
+            box-sizing: border-box;
+
+            .graph-header {
+                @include clearfix;
+                padding: 26px 0 20px;
+
+                h3 {
+                    float: left;
+                    border-bottom: 0;
+                    padding: 2px 0 0;
+                    line-height: normal;
+                    color: #fff;
+                }
+
+                select {
+                    @include background-image-retina('dropdown-arrow-small-dark', 'png', no-repeat, center right, 23px, 31px);
+                    float: right;
+                    margin: 0;
+                    border-color: #3b3b3b;
+                    background-color: #262626 !important;
+                    color: #aaa;
+                }
+            }
+
+            .graph-content {
+                position: relative;
+                width: 100%;
+                height: 360px;
+
+                circle[stroke-opacity],
+                rect[stroke-opacity] {
+                    stroke-width: 0 !important;
+                }
+
+                svg > g > g > g > g > rect[stroke='#ffffff'][stroke-width='1'] {
+                    stroke: transparent !important;
+                }
+
+                svg > g > g > g > circle[stroke='#333333'][stroke-width='1'] {
+                    stroke: transparent !important;
+                    stroke-width: 2 !important;
+                }
+
+                .google-visualization-tooltip {
+                    border: none !important;
+                    border-radius: 2px !important;
+                    box-shadow: none !important;
+                    background-color: #FFF !important;
+                    padding: 0 !important;
+                    width: auto !important;
+                    height: auto !important;
+
+                    ul {
+                        li {
+                            margin: 12px 0 !important;
+
+                            span {
+                                color: #666 !important;
+                                font-family: $family-medium !important;
+                                font-size: 14px !important;
+                                font-weight: normal !important;
+
+                                + span {
+                                    color: #999 !important;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .alert-block {
+                    padding-top: 126px;
+                    height: auto;
+                    text-align: center;
+
+                    .alert {
+                        @include background-image-retina(warning-close, 'png', no-repeat, center, 36px, 36px);
+                        display: block;
+                        margin: 0 auto;
+                        background-color: transparent;
+                        width: 36px;
+                    }
+
+                    .message {
+                        margin: 0;
+
+                        h4 {
+                            margin-top: 12px;
+                            color: $secondary;
+                        }
+                    }
+                }
+
+                &:hover {
+                    a {
+                        &.btn {
+                            &.chart {
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
+            @media screen and (max-width: 1152px) {
+                clear: both;
+                width: 100%;
+            }
+        }
+    }
+}

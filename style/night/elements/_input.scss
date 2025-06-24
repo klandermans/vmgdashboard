@@ -1,0 +1,23 @@
+input[type='text'],
+input[type='password'],
+input[type='url'],
+input[type='email'],
+input[type='number'],
+textarea,
+select,
+.comiseo-daterangepicker-triggerbutton,
+.chosen-choices {
+    background-color: #262626 !important;
+    border-color: #404040 !important;
+    color: #aaa !important;
+
+    &.searchBox {
+        background-color: #3b3b3b;
+        border-color: #3b3b3b;
+        color: #b6b6b6;
+
+        &:focus {
+            color: #fff;
+        }
+    }
+}

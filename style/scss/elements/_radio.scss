@@ -1,0 +1,16 @@
+.radio {
+    label {
+        margin: 0 12px 0 0;
+
+        color: #999;
+        font-family: $family-medium;
+        font-size: 14px;
+
+        input[type='radio'] {
+            position: relative;
+            top: -1px;
+
+            margin-right: 6px;
+        }
+    }
+}

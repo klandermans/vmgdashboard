@@ -1,0 +1,19 @@
+.widget-wizard-steps {
+    ul {
+        &.steps {
+            background-color: #303030;
+            border-bottom: none;
+            border-top: 1px solid #404040;
+
+            li {
+                border-color: #404040;
+
+                span {
+                    &.number {
+                        background-color: rgba(#d6d6d6, .15);
+                    }
+                }
+            }
+        }
+    }
+}

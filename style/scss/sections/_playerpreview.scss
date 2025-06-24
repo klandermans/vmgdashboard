@@ -1,0 +1,21 @@
+.player-preview {
+    padding: 24px;
+
+    h3 {
+        margin: 18px 0 0;
+        width: 100%;
+
+        font-size: 18px;
+    }
+
+    p {
+        padding: 6px 0 0 !important;
+
+        &:empty {
+            &::after {
+                color: #ccc;
+                font-style: italic;
+            }
+        }
+    }
+}

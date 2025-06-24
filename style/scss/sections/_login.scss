@@ -1,0 +1,274 @@
+.index {
+    #wrapper {
+        .index {
+            .breadcrumb {
+                display: none !important;
+            }
+
+            #content {
+                left: 0;
+                background-color: #1f1f1f;
+                background-image: url('../img/world-map.png');
+                background-repeat: no-repeat;
+                background-position: 280px 80px;
+                background-size: 2190px 1042px;
+                padding: 0;
+                width: 100%;
+
+                .top-navigation {
+                    display: none !important;
+                }
+
+                .widget {
+                    position: absolute;
+                    top: 40%;
+                    left: 50%;
+                    margin: -154px 0 0 -154px;
+                    border: 0;
+                    background-color: transparent;
+                    width: 308px;
+
+                    &.signin {
+                        .widget-content {
+                            .button {
+                                border: 0;
+                                background-color: transparent;
+                                padding: 0;
+                            }
+
+                            input[type='text'] {
+                                border-radius: 6px 6px 0 0;
+                                line-height: normal;
+                                padding: 0 52px 0 17px;
+
+                                &[name='email'] {
+                                    padding: 0 17px;
+                                }
+                            }
+
+                            input[type='submit'] {
+                                position: absolute;
+                                top: 39px;
+                                right: 11px;
+                                transition: background-color 0.2s;
+                                border-radius: 12px;
+                                background: $secondary;
+                                background-image: url('../img/signin.svg');
+                                background-repeat: no-repeat;
+                                background-position: 10px center;
+                                background-size: 6px 10px;
+                                width: 24px;
+                                height: 24px;
+                                text-indent: 999999px;
+
+                                &:hover {
+                                    transition: background-color .1s;
+                                    background-color: $secondaryDark;
+                                    color: #fff;
+                                }
+                            }
+                        }
+                    }
+
+                    &.reset {
+                        .widget-content {
+                            .password {
+                                &:first-child {
+                                    input[type='password'] {
+                                        border-top: 0;
+                                        border-radius: 6px 6px 0 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .widget-info {
+                        line-height: 22px;
+                        color: #999;
+                        font-size: 14px;
+
+                        hr {
+                            border-top: 1px solid rgba(#868686, .25);
+                            margin: 0;
+
+                            &:first-child {
+                                margin-bottom: 15px;
+                            }
+
+                            &:last-child {
+                                margin-top: 15px;
+                                margin-bottom: 18px;
+                            }
+                        }
+                    }
+
+                    .widget-header {
+                        border-bottom: 0;
+                        padding: 0;
+
+                        .logo {
+                            left: 0;
+                            margin: 0 auto 18px;
+                            background: url('../img/logo.svg');
+                            background-size: 176px 36px;
+                            width: 176px;
+                            height: 36px;
+                        }
+                    }
+
+                    span {
+                        display: block;
+                        margin: 22px 0 0;
+                        text-align: center;
+                        text-decoration: none;
+                        color: #999;
+                        font-family: $family;
+                        font-size: 14px;
+                        font-weight: normal;
+
+                        a {
+                            text-decoration: none;
+                            color: $primary;
+                        }
+                    }
+
+                    .widget-content {
+                        position: relative;
+                        overflow: hidden;
+
+                        .alert {
+                            padding: 12px 0 0;
+                            line-height: 22px;
+                            color: #999;
+                            font-size: 14px;
+
+                            ul {
+                                padding: 0;
+                            }
+
+                            &.success {
+                                color: #53b32e;
+
+                                hr {
+                                    margin: 18px 0 0;
+                                }
+
+                                a {
+                                    text-decoration: underline;
+                                    color: #53b32e;
+                                }
+                            }
+
+                            &.error {
+                                color: #da0014;
+                            }
+
+                            &.critical {
+                                padding: 0 0 4px;
+                                color: #da0014;
+
+                                hr {
+                                    margin: 18px 0 0;
+                                }
+                            }
+
+                            hr {
+                                margin: 12px 0 0;
+                                border-top: 1px solid rgba(#868686, .25);
+                            }
+                        }
+
+                        form {
+                            margin-bottom: 0;
+
+                            .label {
+                                display: none;
+                            }
+
+                            .button {
+                                border: 0;
+                                background-color: transparent;
+                                padding: 0;
+                            }
+
+                            input[type='text'],
+                            input[type='password'] {
+                                @include placeholder {
+                                    color: #b1b1b1;
+                                }
+
+                                margin: 0;
+                                border: 0;
+                                border-radius: 6px;
+                                padding: 0 17px;
+                                width: 308px;
+                                height: 46px;
+                                max-height: 46px;
+                                color: #666;
+                                font-family: $family;
+                                font-size: 16px;
+                                font-weight: normal;
+                                -webkit-appearance: none;
+                                box-sizing: border-box;
+
+                                &:focus {
+                                    @include placeholder {
+                                        color: transparent;
+                                    }
+
+                                    outline: none;
+                                }
+                            }
+
+                            input[type='password'] {
+                                border-top: 1px solid #868686;
+                                border-radius: 0 0 6px 6px;
+                            }
+
+                            input[type='submit'] {
+                                margin-top: 18px;
+                                width: 100%;
+                                line-height: 41px;
+                                font-size: 16px;
+                            }
+
+                            .captcha {
+                                margin: 0 3px;
+                                padding: 18px 0 0;
+                                width: 302px;
+
+                                .captcha {
+                                    margin: 0;
+                                    padding: 0;
+                                    height: 76px;
+                                }
+
+                                .g-recaptcha {
+                                    transform: scale(1) !important;
+                                }
+                            }
+                        }
+                    }
+
+                    .widget-footer {
+                        padding: 21px 0 20px;
+                        text-align: center;
+                        color: #666;
+                        font-family: $family;
+                        font-size: 14px;
+                        font-weight: normal;
+
+                        a {
+                            color: $primary;
+
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

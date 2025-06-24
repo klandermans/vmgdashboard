@@ -1,0 +1,43 @@
+#switch {
+    display: block;
+    position: relative;
+    border-radius: 19px;
+    background-color: #999;
+    width: 38px;
+    height: 22px;
+
+    span {
+        display: block;
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        transition: all .2s;
+        border: 5px solid #fff;
+        border-radius: 100%;
+        background-color: #ccc;
+        width: 6px;
+        height: 6px;
+    }
+
+    &.on {
+        background-color: #53b32e;
+
+        span {
+            left: 19px;
+        }
+
+        &:hover {
+            span {
+                background-color: #666;
+            }
+        }
+    }
+
+    &:hover {
+        cursor: pointer;
+
+        span {
+            background-color: #53b32e;
+        }
+    }
+}

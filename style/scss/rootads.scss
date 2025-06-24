@@ -1,0 +1,30 @@
+// Settings
+$theme: themes/rootads;
+
+// Colors
+$primary: #00ABFF;
+$primaryLight: #24B7FF;
+
+$secondary: #1BB933;
+$secondaryDark: #15AA2C;
+$secondaryLight: #13C62F;
+
+$dropdownBorder: #47B0E6;
+
+$warning: #DE0000;
+
+// Logos
+$logo: logo;
+$logoHover: logo-hover;
+$logoSmall: logo-small;
+
+$logoWidth: 109px;
+$logoHeight: 24px;
+
+$logoTop: 18px;
+$logoLeft: 21px;
+
+$logoSmallWidth: 21px;
+$logoSmallHeight: 24px;
+
+@import 'base';

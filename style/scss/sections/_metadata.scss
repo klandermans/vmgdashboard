@@ -1,0 +1,28 @@
+.metadata {
+    table {
+        tr {
+            &:hover {
+                background-color: transparent;
+
+                td {
+                    &:last-child {
+                        color: #999;
+                    }
+                }
+            }
+
+            td {
+                height: 28px;
+
+                i {
+                    color: #b6b6b6;
+                }
+
+                &:first-child {
+                    color: #666;
+                    font-family: $family-medium;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,35 @@
+.comiseo-daterangepicker-triggerbutton,
+select {
+    @include background-image-retina('dropdown-arrow-small', 'png', no-repeat, center right, 23px, 31px);
+
+    margin: 0 0 5px;
+
+    border: 1px solid #d6d6d6;
+    border-radius: 2px;
+    background-color: #fff;
+
+    padding: 0 35px 0 12px !important;
+
+    height: 33px !important;
+
+
+    text-indent: .01px;
+    text-overflow: '';
+    color: #999;
+    font-family: $family-medium;
+    font-size: 14px;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    &:-moz-focusring {
+        text-shadow: 0 0 0 #000;
+        color: transparent;
+    }
+
+    &:focus,
+    & *:focus {
+        outline: none;
+    }
+}

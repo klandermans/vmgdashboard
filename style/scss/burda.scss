@@ -1,0 +1,30 @@
+// Settings
+$theme: themes/burda;
+
+// Colors
+$primary: #1997EC;
+$primaryLight: #199EF8;
+
+$secondary: #FF5E5E;
+$secondaryDark: #F25050;
+$secondaryLight: #FF6C6C;
+
+$dropdownBorder: #F7354B;
+
+$warning: #DE0000;
+
+// Logos
+$logo: logo;
+$logoHover: logo;
+$logoSmall: logo-small;
+
+$logoWidth: 148px;
+$logoHeight: 36px;
+
+$logoTop: 11px;
+$logoLeft: 22px;
+
+$logoSmallWidth: 38px;
+$logoSmallHeight: 20px;
+
+@import 'base';

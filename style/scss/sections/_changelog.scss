@@ -1,0 +1,262 @@
+.change {
+    .widget-header {
+        border-bottom: 0;
+        background-color: rgba(#f2f2f2, .75);
+
+        h3 {
+            padding: 18px 0 6px;
+            font-size: 18px;
+        }
+    }
+
+    .widget-content {
+        .changelog {
+            background-color: rgba(#f2f2f2, .75);
+            padding: 0 8px 4px;
+
+            .no-result {
+                background-color: rgba(#e4e4e4, .5);
+                padding: 8px 12px;
+                text-align: center;
+                color: #999;
+                font-family: $family-medium;
+                font-size: 13px;
+            }
+
+            .changelog-info {
+                position: relative;
+                transition: color .1s;
+                border: 1px solid #eee;
+                border-radius: 2px;
+                background-color: #fff;
+                padding: 9px 41px 9px 12px;
+                color: #999;
+                font-family: $family-medium;
+                font-size: 13px;
+
+                .username {
+                    float: right;
+                    transition: color .1s;
+                    width: 60%;
+                    overflow: hidden;
+                    text-align: right;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    color: #ccc;
+                    font-family: $family;
+                }
+
+                &::after {
+                    @include background-image-retina('changelog-open', 'png', no-repeat, 4px 6px, 9px, 6px);
+                    display: block;
+                    position: absolute;
+                    top: 8px;
+                    right: 12px;
+                    transition: background-color .1s;
+                    border-radius: 9px;
+                    background-color: #dbdbdb !important;
+                    width: 17px;
+                    height: 17px;
+                    content: ' ';
+                }
+
+                &:hover {
+                    transition: color .1s;
+                    cursor: pointer;
+                    color: #666;
+
+                    &::after {
+                        @include background-image-retina('changelog-open', 'png', no-repeat, 4px 6px, 9px, 6px);
+                        transition: background-color .1s;
+                        background-color: #666 !important;
+                    }
+
+                    .username {
+                        transition: color .1s;
+                        color: #666;
+                    }
+                }
+
+                &.open {
+                    border-bottom: 1px solid #fff;
+                    color: #666;
+
+                    &::after {
+                        @include background-image-retina('changelog-close', 'png', no-repeat, 4px 5px, 9px, 6px);
+                        background-color: $secondary !important;
+                    }
+
+                    .username {
+                        color: #666;
+                    }
+
+                    + ul {
+                        display: block !important;
+                    }
+                }
+            }
+
+            &:first-child {
+                padding-top: 8px;
+            }
+
+            &:last-child {
+                padding-bottom: 8px;
+            }
+
+            ul {
+                @include clearfix;
+                display: none;
+                padding: 0 !important;
+
+                li {
+                    &.changelog-toggle {
+                        position: relative;
+                        margin-bottom: 2px;
+                        background-color: #e4e4e4;
+                        padding: 8px 12px;
+
+                        &:last-child {
+                            margin-bottom: 8px;
+                        }
+
+                        &::after {
+                            @include background-image-retina('changelog-open', 'png', no-repeat, 4px 6px, 9px, 6px);
+                            display: block;
+                            position: absolute;
+                            top: 10px;
+                            right: 13px;
+                            transition: background-color .1s;
+                            border-radius: 9px;
+                            background-color: #bbb !important;
+                            width: 17px;
+                            height: 17px;
+                            content: ' ';
+                        }
+
+                        &:hover {
+                            background-color: #e0e0e0;
+                            cursor: pointer;
+
+                            &::after {
+                                @include background-image-retina('changelog-open', 'png', no-repeat, 4px 6px, 9px, 6px);
+                                transition: background-color .1s;
+                                background-color: #999 !important;
+                            }
+                        }
+
+                        label {
+                            display: inline-block;
+                            border-radius: 3px;
+                            background-color: #999;
+                            padding: 3px 6px 4px;
+                            text-transform: uppercase;
+                            color: #fff;
+                            font-family: $family-bold;
+                            font-size: 11px;
+
+                            span {
+                                &.arrow-right {
+                                    @include background-image-retina('goto-hover', 'png', no-repeat, 0 0, 5px, 8px);
+                                    display: inline-block;
+                                    opacity: .65;
+                                    margin: 0 2px 0 4px;
+                                    width: 5px;
+                                    height: 8px;
+                                }
+                            }
+                        }
+
+                        .change-container {
+                            display: none;
+
+                            ul {
+                                display: flex;
+                                overflow: hidden;
+                                flex-flow: row wrap;
+
+                                &.change {
+                                    .new,
+                                    .old {
+                                        float: left;
+                                        width: calc(50% - 2px);
+                                        flex: 1 0;
+
+                                        label {
+                                            display: block;
+                                            border: 1px solid #e2e2e2;
+                                            border-radius: 0;
+                                            background-color: #fff;
+                                            padding: 7px 12px 8px;
+                                        }
+                                    }
+
+                                    .old {
+                                        label {
+                                            color: #fdad26;
+                                        }
+                                    }
+
+                                    .new {
+                                        margin-right: 4px;
+
+                                        label {
+                                            color: #53b32e;
+                                        }
+                                    }
+
+                                    span {
+                                        display: block;
+                                        border: 1px solid #e2e2e2;
+                                        border-top: 0;
+                                        background-color: #fff;
+                                        padding: 9px 12px;
+                                        height: calc(100% - 49px);
+                                        min-height: 20px;
+                                        line-height: 20px;
+                                        color: #666;
+                                        font-family: $family;
+                                        font-size: 13px;
+                                        word-wrap: break-word;
+
+                                        i {
+                                            &.empty {
+                                                color: #999;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        &.open {
+                            &::after {
+                                @include background-image-retina('changelog-close', 'png', no-repeat, 4px 5px, 9px, 6px);
+                                background-color: #bbb !important;
+                            }
+
+                            &:hover {
+                                cursor: pointer;
+
+                                &::after {
+                                    @include background-image-retina('changelog-close', 'png', no-repeat, 4px 5px, 9px, 6px);
+                                    background-color: #999 !important;
+                                }
+                            }
+
+                            .change-container {
+                                display: block;
+                            }
+
+                            ul {
+                                &.change {
+                                    padding: 8px 0 4px !important;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

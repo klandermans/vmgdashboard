@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Graphs Demo</title>
+    <link rel="stylesheet" href="style/css/default.css">
+    <style>.navbar{width:180px;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body class="demo">
+<div id="wrapper" class="open">
+    <div class="navbar">
+        <ul class="nav">
+            <li class="dashboard"><a href="index.html" class="menuItem"><span>Dashboard</span></a></li>
+            <li class="graphs"><a href="graphs.html" class="menuItem"><span>Graphs</span></a></li>
+        </ul>
+    </div>
+    <div id="content">
+        <div class="top-navigation">
+            <div id="menu-opener"></div>
+        </div>
+        <div class="span100 statistics">
+            <div class="widget">
+                <div class="graph">
+                    <div class="graph-header">
+                        <h3>Revenue and Impressions</h3>
+                        <form>
+                            <select id="graph1-range">
+                                <option value="7">Last 7 days</option>
+                                <option value="30">Last 30 days</option>
+                            </select>
+                        </form>
+                    </div>
+                    <div class="graph-content">
+                        <canvas id="graph1"></canvas>
+                    </div>
+                </div>
+                <div class="graph">
+                    <div class="graph-header">
+                        <h3>VTR and CTR</h3>
+                        <form>
+                            <select id="graph2-range">
+                                <option value="7">Last 7 days</option>
+                                <option value="30">Last 30 days</option>
+                            </select>
+                        </form>
+                    </div>
+                    <div class="graph-content">
+                        <canvas id="graph2"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="menu.js"></script>
+<script src="graphs.js"></script>
+</body>
+</html>

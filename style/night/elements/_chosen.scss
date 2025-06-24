@@ -1,0 +1,21 @@
+.chosen-container {
+    .chosen-drop {
+        background-color: #262626;
+        border: 1px solid #404040;
+        border-top: none;
+
+        ul {
+            &.chosen-results {
+                li {
+                    &.active-result {
+                        color: #aaa;
+
+                        &.highlighted {
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

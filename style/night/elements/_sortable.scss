@@ -1,0 +1,14 @@
+.ui-sortable {
+    .ui-state-default {
+        background-color: #444;
+        border: 1px solid #444;
+
+        &::before {
+            background: url("../img/night/sortable-default.png");
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 6px 12px;
+            border-right: 1px solid #363636;
+        }
+    }
+}

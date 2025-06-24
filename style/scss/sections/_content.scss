@@ -1,0 +1,19 @@
+#content {
+    @include clearfix;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    // transition: width .2s;
+    margin: 0;
+    background-color: #dbdbdb;
+    padding: 0 20px 20px;
+    width: calc(100% - 102px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+
+    #graph {
+        @include clearfix;
+        float: left;
+    }
+}

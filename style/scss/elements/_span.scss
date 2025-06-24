@@ -1,0 +1,92 @@
+.span100,
+.span80,
+.span70,
+.span60,
+.span50,
+.span40,
+.span30,
+.span20 {
+    float: left;
+}
+
+.span80,
+.span70,
+.span60,
+.span50,
+.span40,
+.span30,
+.span20 {
+    margin-right: 20px;
+}
+
+.span100 {
+    width: 100%;
+
+    &.statistics {
+        margin: 0 -20px;
+        width: calc(100% + 40px);
+    }
+}
+
+.span80 {
+    width: calc(80% - 20px);
+
+    &+ .span20 {
+        margin-right: 0;
+        width: 20%;
+    }
+}
+
+.span70 {
+    width: calc(70% - 20px);
+
+    &+ .span30 {
+        margin-right: 0;
+        width: 30%;
+    }
+}
+
+.span60 {
+    width: calc(60% - 20px);
+
+    &+ .span40 {
+        margin-right: 0;
+        width: 40%;
+    }
+}
+
+.span50 {
+    width: calc(50% - 20px);
+
+    &+ .span50 {
+        margin-right: 0;
+        width: 50%;
+    }
+}
+
+.span40 {
+    width: calc(40% - 20px);
+
+    &+ .span60 {
+        margin-right: 0;
+        width: 60%;
+    }
+}
+
+.span30 {
+    width: calc(30% - 20px);
+
+    &+ .span70 {
+        margin-right: 0;
+        width: 70%;
+    }
+}
+
+.span20 {
+    width: calc(20% - 20px);
+
+    &+ .span80 {
+        margin-right: 0;
+        width: 80%;
+    }
+}

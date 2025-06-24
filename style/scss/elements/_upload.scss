@@ -1,0 +1,51 @@
+#progressbox {
+    @include clearfix;
+
+    position: relative;
+
+    padding: 8px 20px;
+
+    text-align: center;
+    color: #ccc;
+    font-family: $family-medium;
+    font-size: 14px;
+
+    .ui-progressbar {
+        margin-bottom: 7px;
+
+        border: 1px solid #d6d6d6;
+        border-radius: 9px;
+        background-color: #f8f8f8;
+
+        padding: 3px 4px;
+
+        width: calc(100% - 10px);
+
+        .ui-progressbar-value {
+            border-radius: 6px;
+            background-color: #44ac1c;
+
+            height: 12px;
+        }
+    }
+
+    #timespend {
+        display: none;
+    }
+
+    #statustxt,
+    #progressspeed,
+    #progressestimation {
+        display: inline-block;
+    }
+
+    #statustxt {
+        float: left;
+        margin-left: 5px;
+    }
+
+    #progressestimation {
+        float: right;
+        margin-right: 5px;
+    }
+}

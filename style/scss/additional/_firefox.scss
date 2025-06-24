@@ -1,0 +1,26 @@
+@-moz-document url-prefix() {
+    .btn {
+        &::before {
+            margin: 0 9px -1px 0 !important;
+        }
+    }
+
+    input[type='file'] {
+        margin: 1px 0 0;
+        padding: 14px 0;
+    }
+
+    select {
+        height: auto !important;
+
+        padding: 12px 12px !important;
+    }
+
+    #wrapper {
+        #content {
+            .page-controls {
+                margin: 0 -24px 0 -24px !important;
+            }
+        }
+    }
+}

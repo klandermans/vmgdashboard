@@ -1,0 +1,462 @@
+.btn,
+a.btn,
+button,
+button.btn,
+button.btn-primary,
+input[type='submit'],
+.ui-button {
+    display: inline-block;
+    position: relative;
+    border: 0;
+    border-radius: 2px;
+    background-color: $primary;
+    cursor: pointer;
+    padding: 0 12px;
+    line-height: 32px;
+    color: #fff;
+    font-family: $family-medium;
+    font-size: 14px;
+
+    &#previousOrder,
+    &#previousOrderTop {
+        float: left;
+        background-color: #fafafa;
+        color: #999;
+        border: 1px solid #d6d6d6;
+        line-height: 30px;
+
+        &:hover {
+            background-color: #fff;
+            color: #666;
+        }
+    }
+
+    &.pricingRuleBtn {
+        &::before {
+            @include background-image-retina('buttons/add', 'png', no-repeat, center, 13px, 13px);
+            display: inline-block;
+            margin: 0 9px -2px 0;
+            width: 13px;
+            height: 13px;
+            content: '';
+        }
+    }
+
+    &.pricingRuleBtn,
+    &.ui-priority-secondary {
+        background-color: #999;
+        padding: 0 12px 0 10px;
+
+        &:hover {
+            background-color: #666;
+        }
+    }
+
+    &[type='submit'] {
+        background-color: $secondary;
+
+        &:hover {
+            background-color: $secondaryDark;
+        }
+    }
+
+    .count {
+        display: inline-block;
+        position: relative;
+        top: -1px;
+        margin: 0 -4px 0 8px;
+        border-radius: 20px;
+        background-color: rgba(0, 0, 0, .12);
+        padding: 3px 7px 4px;
+        line-height: 13px;
+        font-family: $family-bold;
+        font-size: 11px;
+    }
+
+    &:hover {
+        background-color: $primaryLight;
+        color: #fff;
+
+        &.active {
+            .count {
+                background-color: rgba(0, 0, 0, .12);
+            }
+        }
+
+        .count {
+            background-color: rgba(0, 0, 0, .24);
+        }
+    }
+}
+
+.btn-primary {
+    background-color: $primary;
+}
+
+input[type=file]::-webkit-file-upload-button {
+    display: inline-block;
+    border: 0;
+    border-radius: 2px;
+    background-color: #999;
+    cursor: pointer;
+    padding: 0 12px;
+    text-transform: capitalize;
+    line-height: 33px;
+    color: #fff;
+    font-family: $family-medium;
+    font-size: 14px;
+
+    &:hover {
+        background-color: $primary;
+    }
+}
+
+.btn {
+    &.warning {
+        background-color: $warning;
+
+        &:hover {
+            background-color: darken($warning, 2%);
+        }
+    }
+
+    &.add {
+        background-color: $secondary;
+
+        &:hover {
+            background-color: $secondaryDark;
+        }
+    }
+
+    &.chart {
+        display: block !important;
+        position: absolute;
+        top: 0;
+        opacity: 0.1;
+        z-index: 999;
+        background-color: transparent;
+        padding: 0 30px;
+        width: 100%;
+        text-align: right;
+        color: #fff;
+        font-size: 12px;
+        box-sizing: border-box;
+
+        &:hover {
+            background-color: transparent;
+            cursor: pointer;
+            text-decoration: underline;
+            color: $primary;
+        }
+    }
+
+    &.AddBooking,
+    &.acl,
+    &.add,
+    &.adsets,
+    &.assets,
+    &.bookings,
+    &.btn-export,
+    &.categories,
+    &.customers,
+    &.dashboard,
+    &.details,
+    &.direct,
+    &.edit,
+    &.embedcode,
+    &.excel,
+    &.exchange,
+    &.finished,
+    &.firstQuartile,
+    &.graph,
+    &.invoice,
+    &.live,
+    &.midpoint,
+    &.network,
+    &.paused,
+    &.payment,
+    &.planned,
+    &.playlists,
+    &.pos,
+    &.preview,
+    &.print,
+    &.publishers,
+    &.remove,
+    &.report,
+    &.reported,
+    &.reportedInvoice,
+    &.running,
+    &.sharedVideos,
+    &.tags,
+    &.thirdQuartile,
+    &.trackers,
+    &.videos,
+    &.websites {
+        padding: 0 12px 0 10px;
+
+        &::before {
+            display: inline-block;
+            margin: 0 9px -2px 0;
+            width: 13px;
+            height: 13px;
+            content: '';
+        }
+    }
+
+    &.payment {
+        &::before {
+            @include background-image-retina('buttons/payment', 'png', no-repeat, center, 13px, 13px);
+        }
+    }
+
+    &.reportedInvoice {
+        &::before {
+            @include background-image-retina('buttons/reportedInvoice', 'png', no-repeat, center, 13px, 13px);
+        }
+    }
+
+    &.invoice {
+        &::before {
+            @include background-image-retina('buttons/invoice', 'png', no-repeat, center, 13px, 13px);
+        }
+    }
+
+    &.network {
+        &::before {
+            @include background-image-retina('buttons/network', 'png', no-repeat, center, 13px, 13px);
+        }
+    }
+
+    &.sharedVideos {
+        &::before {
+            @include background-image-retina('buttons/sharedvideos', 'png', no-repeat, center, 18px, 15px);
+            margin: 0 9px -3px 0;
+            width: 18px;
+            height: 15px;
+        }
+    }
+
+    &.videos {
+        &::before {
+            @include background-image-retina('buttons/videos', 'png', no-repeat, center, 17px, 13px);
+            margin: 0 9px -3px 0;
+            width: 17px;
+            height: 13px;
+        }
+    }
+
+    &.embedcode {
+        &::before {
+            @include background-image-retina('buttons/trackers', 'png', no-repeat, center, 13px, 13px);
+        }
+    }
+
+    &.direct {
+        &::before {
+            @include background-image-retina('buttons/direct', 'png', no-repeat, center, 13px, 13px);
+        }
+    }
+
+    &.exchange {
+        &::before {
+            @include background-image-retina('buttons/exchange', 'png', no-repeat, center, 13px, 13px);
+        }
+    }
+
+    &.categories {
+        &::before {
+            @include background-image-retina('buttons/category', 'png', no-repeat, center, 13px, 13px);
+        }
+    }
+
+    &.playlists {
+        &::before {
+            @include background-image-retina('buttons/playlist', 'png', no-repeat, center, 13px, 13px);
+        }
+    }
+
+    &.thirdQuartile {
+        &::before {
+            @include background-image-retina('buttons/thirdquartile', 'png', no-repeat, center, 13px, 13px);
+        }
+    }
+
+    &.midpoint {
+        &::before {
+            @include background-image-retina('buttons/midpoint', 'png', no-repeat, center, 13px, 13px);
+        }
+    }
+
+    &.firstQuartile {
+        &::before {
+            @include background-image-retina('buttons/firstquartile', 'png', no-repeat, center, 13px, 13px);
+        }
+    }
+
+    &.excel {
+        &::before {
+            @include background-image-retina('buttons/excel', 'png', no-repeat, center, 13px, 13px);
+        }
+    }
+
+    &.websites {
+        &::before {
+            @include background-image-retina('buttons/websites', 'png', no-repeat, center, 15px, 15px);
+            margin: 0 9px -3px 0;
+            width: 15px;
+            height: 15px;
+        }
+    }
+
+    &.adsets {
+        &::before {
+            @include background-image-retina('buttons/adset', 'png', no-repeat, center, 13px, 13px);
+        }
+    }
+
+    &.pos {
+        &::before {
+            @include background-image-retina('buttons/purchaseorder', 'png', no-repeat, center, 13px, 13px);
+        }
+    }
+
+    &.print {
+        &::before {
+            @include background-image-retina('buttons/print', 'png', no-repeat, center, 13px, 13px);
+        }
+    }
+
+    &.btn-export {
+        &::before {
+            @include background-image-retina('buttons/export', 'png', no-repeat, center, 13px, 13px);
+        }
+    }
+
+    &.dashboard {
+        &::before {
+            @include background-image-retina('buttons/dashboard', 'png', no-repeat, center, 13px, 13px);
+        }
+    }
+
+    &.preview {
+        &::before {
+            @include background-image-retina('buttons/preview', 'png', no-repeat, center, 13px, 13px);
+        }
+    }
+
+    &.customers {
+        &::before {
+            @include background-image-retina('buttons/customers', 'png', no-repeat, center, 13px, 13px);
+        }
+    }
+
+    &.publishers {
+        &::before {
+            @include background-image-retina('buttons/publishers', 'png', no-repeat, center, 13px, 13px);
+        }
+    }
+
+    &.bookings {
+        &::before {
+            @include background-image-retina('buttons/bookings', 'png', no-repeat, center, 13px, 13px);
+        }
+    }
+
+    &.trackers {
+        &::before {
+            @include background-image-retina('buttons/trackers', 'png', no-repeat, center, 13px, 13px);
+        }
+    }
+
+    &.tags {
+        &::before {
+            @include background-image-retina('buttons/tags', 'png', no-repeat, center, 13px, 13px);
+        }
+    }
+
+    &.report {
+        &::before {
+            @include background-image-retina('buttons/report', 'png', no-repeat, center, 16px, 13px);
+            width: 16px;
+        }
+    }
+
+    &.details {
+        &::before {
+            @include background-image-retina('buttons/details', 'png', no-repeat, center, 16px, 16px);
+            margin: 0 9px -3px 0;
+            width: 16px;
+            height: 16px;
+        }
+    }
+
+    &.running {
+        &::before {
+            @include background-image-retina('buttons/running', 'png', no-repeat, center, 13px, 13px);
+        }
+    }
+
+    &.planned {
+        &::before {
+            @include background-image-retina('buttons/planned', 'png', no-repeat, center, 13px, 13px);
+        }
+    }
+
+    &.paused {
+        &::before {
+            @include background-image-retina('buttons/paused', 'png', no-repeat, center, 13px, 13px);
+        }
+    }
+
+    &.finished {
+        &::before {
+            @include background-image-retina('buttons/finished', 'png', no-repeat, center, 13px, 13px);
+        }
+    }
+
+    &.reported {
+        &::before {
+            @include background-image-retina('buttons/reported', 'png', no-repeat, center, 13px, 13px);
+        }
+    }
+
+    &.AddBooking,
+    &.add {
+        &::before {
+            @include background-image-retina('buttons/add', 'png', no-repeat, center, 13px, 13px);
+        }
+    }
+
+    &.edit {
+        &::before {
+            @include background-image-retina('buttons/edit', 'png', no-repeat, center, 13px, 13px);
+        }
+    }
+
+    &.remove {
+        background-color: $warning !important;
+
+        &::before {
+            @include background-image-retina('buttons/remove', 'png', no-repeat, center, 13px, 13px);
+        }
+    }
+
+    &.graph,
+    &.live {
+        &::before {
+            @include background-image-retina('buttons/live', 'png', no-repeat, center, 13px, 13px);
+        }
+    }
+
+    &.acl {
+        &::before {
+            @include background-image-retina('buttons/acl', 'png', no-repeat, center, 13px, 13px);
+        }
+    }
+
+    &.assets {
+        &::before {
+            @include background-image-retina('buttons/assets', 'png', no-repeat, center, 13px, 13px);
+        }
+    }
+}

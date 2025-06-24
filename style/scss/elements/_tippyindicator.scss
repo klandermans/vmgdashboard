@@ -1,0 +1,11 @@
+.tippy-indicator {
+    display: inline-block;
+    margin: 0 0 -2px 4px;
+    width: 14px;
+    height: 14px;
+    @include background-image-retina('help', 'png', no-repeat, center center, 14px, 14px);
+
+    &:hover {
+        @include background-image-retina('help-hover', 'png', no-repeat, center center, 14px, 14px);
+    }
+}

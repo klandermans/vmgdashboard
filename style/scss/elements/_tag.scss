@@ -1,0 +1,36 @@
+a.tag,
+.tag {
+    display: inline-block;
+    margin: 0 4px 0 0;
+
+    border-radius: 18px;
+
+    padding: 4px 10px;
+
+    line-height: normal;
+    color: #fff;
+    font-family: $family-medium;
+    font-size: 12px;
+}
+
+a {
+    &.tag {
+        background-color: #bbb;
+
+        &:hover {
+            cursor: pointer;
+
+            color: #fff;
+        }
+    }
+}
+
+.tag {
+    background-color: #bbb;
+
+    &:hover {
+        background-color: #bbb;
+
+        cursor: default;
+    }
+}

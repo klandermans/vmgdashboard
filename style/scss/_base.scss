@@ -1,0 +1,123 @@
+// Basic
+@import 'bourbon';
+@import 'normalize';
+@import 'variables';
+@import 'mixins';
+@import 'none';
+
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-font-smoothing: antialiased;
+    outline: 0;
+
+    :focus {
+        outline: none;
+    }
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-y: hidden;
+    min-width: 320px;
+}
+
+a {
+    text-decoration: none;
+
+    :hover,
+    :active,
+    :focus {
+        outline: 0;
+    }
+}
+
+ul,
+dl {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+br {
+    display: none;
+}
+
+// Animations
+@import 'animations/bounce';
+
+// Sections
+@import 'sections/login';
+@import 'sections/gdpr';
+@import 'sections/navigation';
+@import 'sections/topnavigation';
+@import 'sections/pagecontrols';
+@import 'sections/breadcrumb';
+@import 'sections/widgetcontrols';
+@import 'sections/widget';
+@import 'sections/widgetwizardsteps';
+@import 'sections/widgetheader';
+@import 'sections/wrapper';
+@import 'sections/content';
+@import 'sections/table';
+@import 'sections/form';
+@import 'sections/querybuilder';
+@import 'sections/paginator';
+@import 'sections/videoitems';
+@import 'sections/metadata';
+@import 'sections/changelog';
+@import 'sections/statistics';
+@import 'sections/advancedreport';
+@import 'sections/playerpreview';
+@import 'sections/reportgenerator';
+@import 'sections/report';
+
+// Elements
+@import 'elements/logo';
+@import 'elements/menuopener';
+@import 'elements/button';
+@import 'elements/input';
+@import 'elements/textarea';
+@import 'elements/select';
+@import 'elements/span';
+@import 'elements/tagit';
+@import 'elements/modal';
+@import 'elements/datepicker';
+@import 'elements/chosen';
+@import 'elements/sweetalert';
+@import 'elements/upload';
+@import 'elements/option';
+@import 'elements/alert';
+@import 'elements/notification';
+@import 'elements/herounit';
+@import 'elements/radio';
+@import 'elements/hr';
+@import 'elements/tag';
+@import 'elements/loader';
+@import 'elements/reportfilter';
+@import 'elements/sortable';
+@import 'elements/tippyindicator';
+@import 'elements/switch';
+@import 'elements/invoiceoverview';
+
+// Additional
+@import 'additional/screen';
+@import 'additional/firefox';
+@import 'additional/responsive';
+@import 'additional/open';
