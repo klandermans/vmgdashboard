@@ -1,6 +1,7 @@
 let campaigns = [];
 const tbody = document.querySelector('#campaign-table tbody');
 const title = document.getElementById('table-title');
+const statsContainer = document.getElementById('dash-stats');
 
 function render(filter) {
   tbody.innerHTML = '';
@@ -30,6 +31,20 @@ function render(filter) {
   } else {
     title.textContent = 'All campaigns';
   }
+  showStats();
+}
+
+function showStats() {
+  if (!statsContainer) return;
+  const totals = campaigns.reduce((acc, c) => {
+    acc.imps += c.impression;
+    acc.rev += c.grossRevenue;
+    return acc;
+  }, { imps: 0, rev: 0 });
+  statsContainer.innerHTML = `
+    <div class="stats-block">Campaigns ${campaigns.length}</div>
+    <div class="stats-block">Total imp ${totals.imps}</div>
+    <div class="stats-block">Revenue €${totals.rev.toFixed(2)}</div>`;
 }
 
 function loadExtra() {

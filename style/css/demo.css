@@ -9,3 +9,8 @@
 #menu-opener::after{top:8px;}
 .page-title{font-size:18px;margin-left:10px;}
 table.table tbody tr{cursor:pointer;}
+.stats-blocks{display:flex;gap:15px;margin:10px 0;flex-wrap:wrap}
+.stats-block{background:#ffeb3b;color:#000;padding:10px;border-radius:4px;flex:1 0 120px;text-align:center;font-weight:bold}
+.subnav{margin:10px 0;}
+.subnav a{margin-right:10px;color:#2ea5e3;text-decoration:none;font-weight:bold}
+.subnav a.active{color:#000;background:#ffeb3b;padding:4px 8px;border-radius:4px}

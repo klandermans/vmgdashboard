@@ -1,3 +1,5 @@
+const statsContainer = document.getElementById('graphs-stats');
+
 fetch('chart-data.json')
   .then(r => r.json())
   .then(data => {
@@ -68,5 +70,17 @@ fetch('chart-data.json')
         }
       }
     });
+
+    showStats(data);
   })
   .catch(e => console.error('Failed to load chart data', e));
+
+function showStats(data) {
+  if (!statsContainer) return;
+  const totalImp = data.impressions.reduce((a, b) => a + b, 0);
+  const totalRev = data.revenue.reduce((a, b) => a + b, 0);
+  statsContainer.innerHTML = `
+    <div class="stats-block">Days ${data.range.length}</div>
+    <div class="stats-block">Impressions ${totalImp}</div>
+    <div class="stats-block">Revenue €${totalRev.toFixed(2)}</div>`;
+}

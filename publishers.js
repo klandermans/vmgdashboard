@@ -1,5 +1,6 @@
 let publishers = [];
 const pbody = document.querySelector('#publishers-table tbody');
+const statsContainer = document.getElementById('publishers-stats');
 
 function renderPublishers() {
   pbody.innerHTML = '';
@@ -16,6 +17,7 @@ function renderPublishers() {
     });
     pbody.appendChild(tr);
   });
+  showStats();
 }
 
 function loadExtra() {
@@ -33,3 +35,11 @@ fetch('publishers.json')
     renderPublishers();
   })
   .catch(err => console.error(err));
+
+function showStats() {
+  if (!statsContainer) return;
+  const totalSites = publishers.reduce((a, p) => a + p.numberOfWebsites, 0);
+  statsContainer.innerHTML = `
+    <div class="stats-block">Publishers ${publishers.length}</div>
+    <div class="stats-block">Websites ${totalSites}</div>`;
+}

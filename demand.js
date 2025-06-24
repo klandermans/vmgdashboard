@@ -1,6 +1,7 @@
 let demandCampaigns = [];
 const dtbody = document.querySelector('#demand-table tbody');
 const dtitle = document.getElementById('demand-title');
+const statsContainer = document.getElementById('demand-stats');
 
 function draw(status) {
   dtbody.innerHTML = '';
@@ -19,6 +20,20 @@ function draw(status) {
       dtbody.appendChild(tr);
     });
   dtitle.textContent = status === 'all' ? 'All campaigns' : status.charAt(0).toUpperCase() + status.slice(1);
+  showStats();
+}
+
+function showStats() {
+  if (!statsContainer) return;
+  const totals = demandCampaigns.reduce((acc, c) => {
+    acc.imps += c.impression;
+    acc.rev += c.grossRevenue;
+    return acc;
+  }, { imps: 0, rev: 0 });
+  statsContainer.innerHTML = `
+    <div class="stats-block">Campaigns ${demandCampaigns.length}</div>
+    <div class="stats-block">Total imp ${totals.imps}</div>
+    <div class="stats-block">Revenue €${totals.rev.toFixed(2)}</div>`;
 }
 
 function loadExtra() {

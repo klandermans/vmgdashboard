@@ -12,7 +12,9 @@ Open `index.html` and choose one of the demo pages. All pages share the same sim
 - **Add campaign** – create a new direct or deal campaign. Saved items appear on the other pages and a short confirmation is shown after saving.
 - **Add publisher** – add a new publisher record. New publishers are stored locally and listed with the others.
 - **Campaign wizard** – a small multi-step form.
-- **Graphs** – renders example charts with Chart.js and a summary graph on the Dashboard.
+&
+
+Recent updates added a small subnavigation below the page title and yellow statistics blocks on several pages to mimic the look of the original application. The graphs page is also linked from this subnavigation so you can quickly switch between overviews.
 
 Newly added items are saved in your browser's local storage so you can refresh
 the demo without losing them.
@@ -24,3 +26,4 @@ The old PDF manual has been replaced with a Markdown file, `VMG Platform Manual 
 Fonts are not included; copy your own WOFF files into `style/fonts` if you need them.
 
 You can serve the demo from any static web server or directly via GitHub Pages.
+\n## Tests\nRun `tests/run-tests.sh` from this folder to lint and check the example data.
