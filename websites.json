@@ -1,0 +1,7 @@
+[
+  {"publisherId":1,"domain":"site-one.com"},
+  {"publisherId":1,"domain":"blog-one.com"},
+  {"publisherId":2,"domain":"network-two.net"},
+  {"publisherId":3,"domain":"pub-three.com"},
+  {"publisherId":3,"domain":"another-three.com"}
+]

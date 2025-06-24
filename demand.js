@@ -13,6 +13,9 @@ function draw(status) {
         <td class="right">${c.campaignState}</td>
         <td class="right">${c.impression}</td>
         <td class="right">${c.grossRevenue.toFixed(2)}</td>`;
+      tr.addEventListener('click', () => {
+        window.location = `campaign.html?id=${c.id}`;
+      });
       dtbody.appendChild(tr);
     });
   dtitle.textContent = status === 'all' ? 'All campaigns' : status.charAt(0).toUpperCase() + status.slice(1);

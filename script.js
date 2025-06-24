@@ -18,6 +18,9 @@ function render(filter) {
         <td class="right">${c.grossRevenue.toFixed(2)}</td>
         <td>${c.startDate}</td>
         <td>${c.endDate}</td>`;
+      tr.addEventListener('click', () => {
+        window.location = `campaign.html?id=${c.id}`;
+      });
       tbody.appendChild(tr);
     });
   if (filter === 'direct') {

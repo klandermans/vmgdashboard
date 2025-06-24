@@ -11,6 +11,9 @@ function renderPublishers() {
       <td>${p.type}</td>
       <td>${p.accountManager}</td>
       <td class="right">${p.numberOfWebsites}</td>`;
+    tr.addEventListener('click', () => {
+      window.location = `publisher.html?id=${p.id}`;
+    });
     pbody.appendChild(tr);
   });
 }
