@@ -1,6 +1,8 @@
 /* Simple overrides for the static demo */
-body.demo #wrapper .navbar{width:180px;}
-.top-navigation{position:relative;background:#2ea5e3;color:#fff;height:50px;line-height:50px;padding-left:60px;}
+#wrapper.open .navbar{width:180px;}
+#wrapper:not(.open) .navbar{width:0;overflow:hidden;}
+.navbar{transition:width .3s;}
+.top-navigation{position:relative;background:#2ea5e3;color:#fff;height:50px;line-height:50px;padding-left:60px;display:flex;align-items:center;}
 #menu-opener{position:absolute;left:20px;top:24px;width:30px;height:2px;background:#fff;cursor:pointer;}
 #menu-opener::before,#menu-opener::after{content:'';position:absolute;left:0;width:30px;height:2px;background:#fff;}
 #menu-opener::before{top:-8px;} 

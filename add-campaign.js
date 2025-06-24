@@ -27,7 +27,7 @@ if (form) {
       budget: Number(raw.budget)
     };
     save(record);
-    out.textContent = JSON.stringify(record, null, 2);
+    out.textContent = 'Campaign saved';
     form.reset();
   });
 }

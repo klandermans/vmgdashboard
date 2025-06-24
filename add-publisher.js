@@ -19,7 +19,7 @@ if (form) {
       numberOfWebsites: Number(raw.sites)
     };
     savePublisher(record);
-    out.textContent = JSON.stringify(record, null, 2);
+    out.textContent = 'Publisher saved';
     form.reset();
   });
 }
