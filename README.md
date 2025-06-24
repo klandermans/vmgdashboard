@@ -7,9 +7,13 @@ Open `index.html` and choose one of the demo pages:
 - **Dashboard** – shows all campaigns with filters for direct and deal types.
 - **Demand** – lists campaigns grouped by running, paused, planned and finished state.
 - **Publishers** – displays a few example publishers loaded from `publishers.json`.
-- **Add campaign** – a simple form that outputs the entered values as JSON.
+- **Add campaign** – create a new direct or deal campaign stored in your browser.
+- **Add publisher** – add a new publisher record stored in your browser.
 - **Campaign wizard** – a small multi-step form.
 - **Graphs** – renders example charts with Chart.js.
+
+Newly added items are saved in your browser's local storage so you can refresh
+the demo without losing them.
 
 All pages read their data from the JSON files in this folder so no backend is required.
 

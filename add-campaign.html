@@ -15,11 +15,20 @@
     <div class="navbar">
         <ul class="nav">
             <li class="dashboard"><a href="dashboard.html" class="menuItem"><span>Dashboard</span></a></li>
-            <li class="directDemand"><a href="demand.html" class="menuItem"><span>Demand</span></a></li>
+            <li class="demand"><a href="demand.html" class="menuItem"><span>Demand</span></a></li>
             <li class="publishers"><a href="publishers.html" class="menuItem"><span>Publishers</span></a></li>
+            <li class="supply"><a href="#" class="menuItem"><span>Supply</span></a></li>
+            <li class="channels"><a href="#" class="menuItem"><span>Channels</span></a></li>
+            <li class="cms"><a href="#" class="menuItem"><span>Video CMS</span></a></li>
+            <li class="invoices"><a href="#" class="menuItem"><span>Invoices</span></a></li>
+            <li class="report"><a href="#" class="menuItem"><span>Report</span></a></li>
+            <li class="root"><a href="#" class="menuItem"><span>Root</span></a></li>
             <li class="add"><a href="add-campaign.html" class="menuItem"><span>Add campaign</span></a></li>
+            <li class="addPublisher"><a href="add-publisher.html" class="menuItem"><span>Add publisher</span></a></li>
             <li class="wizard"><a href="campaign-wizard.html" class="menuItem"><span>Wizard</span></a></li>
             <li class="graphs"><a href="graphs.html" class="menuItem"><span>Graphs</span></a></li>
+            <li class="help"><a href="#" class="menuItem"><span>Help</span></a></li>
+            <li class="status"><a href="#" class="menuItem"><span>Notifications</span></a></li>
         </ul>
     </div>
     <div id="content">
@@ -34,6 +43,21 @@
                 <div class="widget-content">
                     <form id="campaign-form">
                         <label>Campaign name <input type="text" name="name" required></label>
+                        <label>DSP <input type="text" name="dsp" required></label>
+                        <label>Type
+                            <select name="type">
+                                <option value="direct">Direct</option>
+                                <option value="deal">Deal</option>
+                            </select>
+                        </label>
+                        <label>Status
+                            <select name="state">
+                                <option value="running">Running</option>
+                                <option value="paused">Paused</option>
+                                <option value="planned">Planned</option>
+                                <option value="finished">Finished</option>
+                            </select>
+                        </label>
                         <label>Budget <input type="number" name="budget" required></label>
                         <label>Start date <input type="date" name="start" required></label>
                         <label>End date <input type="date" name="end" required></label>

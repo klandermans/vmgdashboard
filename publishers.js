@@ -15,10 +15,18 @@ function renderPublishers() {
   });
 }
 
+function loadExtra() {
+  try {
+    return JSON.parse(localStorage.getItem('extraPublishers')) || [];
+  } catch (e) {
+    return [];
+  }
+}
+
 fetch('publishers.json')
   .then(r => r.json())
   .then(data => {
-    publishers = data;
+    publishers = data.concat(loadExtra());
     renderPublishers();
   })
   .catch(err => console.error(err));

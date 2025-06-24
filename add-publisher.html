@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Publishers</title>
+    <title>Add Publisher</title>
     <link rel="stylesheet" href="style/css/default.css">
     <style>
         .navbar { width: 180px; }
+        form label { display: block; margin-top: 8px; }
     </style>
 </head>
 <body class="demo">
@@ -37,27 +38,28 @@
         <div class="span100">
             <div class="widget">
                 <div class="widget-header">
-                    <h3>Publishers</h3>
+                    <h3>Add publisher</h3>
                 </div>
                 <div class="widget-content">
-                    <table id="publishers-table" class="table">
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>Publisher</th>
-                                <th>Type</th>
-                                <th>Account manager</th>
-                                <th class="right">Websites</th>
-                            </tr>
-                        </thead>
-                        <tbody></tbody>
-                    </table>
+                    <form id="publisher-form">
+                        <label>Name <input type="text" name="name" required></label>
+                        <label>Type
+                            <select name="type">
+                                <option value="direct">Direct</option>
+                                <option value="network">Network</option>
+                            </select>
+                        </label>
+                        <label>Account manager <input type="text" name="account" required></label>
+                        <label>Websites <input type="number" name="sites" required></label>
+                        <button type="submit">Save</button>
+                    </form>
+                    <pre id="publisher-output"></pre>
                 </div>
             </div>
         </div>
     </div>
 </div>
 <script src="menu.js"></script>
-<script src="publishers.js"></script>
+<script src="add-publisher.js"></script>
 </body>
 </html>

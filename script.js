@@ -29,10 +29,18 @@ function render(filter) {
   }
 }
 
+function loadExtra() {
+  try {
+    return JSON.parse(localStorage.getItem('extraCampaigns')) || [];
+  } catch (e) {
+    return [];
+  }
+}
+
 fetch('data.json')
   .then(r => r.json())
   .then(data => {
-    campaigns = data;
+    campaigns = data.concat(loadExtra());
     render('all');
   })
   .catch(err => console.error('Failed to load data', err));

@@ -18,10 +18,18 @@ function draw(status) {
   dtitle.textContent = status === 'all' ? 'All campaigns' : status.charAt(0).toUpperCase() + status.slice(1);
 }
 
+function loadExtra() {
+  try {
+    return JSON.parse(localStorage.getItem('extraCampaigns')) || [];
+  } catch (e) {
+    return [];
+  }
+}
+
 fetch('data.json')
   .then(r => r.json())
   .then(data => {
-    demandCampaigns = data;
+    demandCampaigns = data.concat(loadExtra());
     draw('all');
   })
   .catch(err => console.error(err));
