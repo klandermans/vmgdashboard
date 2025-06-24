@@ -3,66 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard Demo</title>
+    <title>Dashboard Demo Home</title>
     <link rel="stylesheet" href="style/css/default.css">
     <style>
-        /* small override so demo menu fits */
-        .navbar { width: 180px; }
+        body.demo-home {
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+        .pages ul {
+            list-style: none;
+            padding: 0;
+        }
+        .pages li {
+            margin: 8px 0;
+        }
     </style>
 </head>
-<body class="demo">
-<div id="wrapper" class="open">
-    <div class="navbar">
-        <ul class="nav">
-            <li class="dashboard"><a href="#" class="menuItem"><span>Dashboard</span></a></li>
-            <li class="directDemand"><a href="#" class="menuItem"><span>Direct demand</span></a></li>
-            <li class="openRtb"><a href="#" class="menuItem"><span>RTB demand</span></a></li>
-            <li class="graphs"><a href="graphs.html" class="menuItem"><span>Graphs</span></a></li>
+<body class="demo-home">
+    <h1>Dashboard Production Demo</h1>
+    <p>This demo is a static snapshot of the original application. The following pages are available:</p>
+    <div class="pages">
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="demand.html">Demand</a></li>
+            <li><a href="publishers.html">Publishers</a></li>
+            <li><a href="add-campaign.html">Add campaign</a></li>
+            <li><a href="campaign-wizard.html">Campaign wizard</a></li>
+            <li><a href="graphs.html">Graphs</a></li>
         </ul>
     </div>
-    <div id="content">
-        <div class="top-navigation">
-            <div id="menu-opener"></div>
-        </div>
-        <div class="span100 statistics">
-            <div class="widget">
-                <div class="stats-filters">
-                    <div class="filters">
-                        <a href="#" class="filter" data-filter="all">All campaigns</a>
-                        <a href="#" class="filter" data-filter="direct">Direct campaigns</a>
-                        <a href="#" class="filter" data-filter="deal">Deals</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="span100">
-            <div class="widget">
-                <div class="widget-header">
-                    <h3 id="table-title">All campaigns</h3>
-                </div>
-                <div class="widget-content">
-                    <table id="campaign-table" class="table">
-                        <thead>
-                            <tr>
-                                <th>DSP</th>
-                                <th>RTB campaign</th>
-                                <th class="right">Deals</th>
-                                <th class="right">Imp. yesterday</th>
-                                <th class="right">Revenue yesterday</th>
-                                <th class="right">Imp. total</th>
-                                <th class="right">Revenue total</th>
-                                <th>Start date</th>
-                                <th>End date</th>
-                            </tr>
-                        </thead>
-                        <tbody></tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<script src="menu.js"></script>
-<script src="script.js"></script>
 </body>
 </html>

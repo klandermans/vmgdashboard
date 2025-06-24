@@ -1,0 +1,5 @@
+[
+  {"id": 1, "name": "Publisher One", "type": "direct", "accountManager": "Alice", "numberOfWebsites": 10},
+  {"id": 2, "name": "Network Two", "type": "network", "accountManager": "Bob", "numberOfWebsites": 25},
+  {"id": 3, "name": "Publisher Three", "type": "direct", "accountManager": "Claire", "numberOfWebsites": 5}
+]

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campaign Wizard</title>
+    <link rel="stylesheet" href="style/css/default.css">
+    <style>
+        .navbar { width: 180px; }
+        .step { display: none; }
+        .step.active { display: block; }
+        form label { display: block; margin-top: 8px; }
+    </style>
+</head>
+<body class="demo">
+<div id="wrapper" class="open">
+    <div class="navbar">
+        <ul class="nav">
+            <li class="dashboard"><a href="dashboard.html" class="menuItem"><span>Dashboard</span></a></li>
+            <li class="directDemand"><a href="demand.html" class="menuItem"><span>Demand</span></a></li>
+            <li class="publishers"><a href="publishers.html" class="menuItem"><span>Publishers</span></a></li>
+            <li class="add"><a href="add-campaign.html" class="menuItem"><span>Add campaign</span></a></li>
+            <li class="wizard"><a href="campaign-wizard.html" class="menuItem"><span>Wizard</span></a></li>
+            <li class="graphs"><a href="graphs.html" class="menuItem"><span>Graphs</span></a></li>
+        </ul>
+    </div>
+    <div id="content">
+        <div class="top-navigation">
+            <div id="menu-opener"></div>
+        </div>
+        <div class="span100">
+            <div class="widget">
+                <div class="widget-header">
+                    <h3>Campaign wizard</h3>
+                </div>
+                <div class="widget-content">
+                    <form id="wizard-form">
+                        <div class="step active" data-step="1">
+                            <h4>Step 1: basic info</h4>
+                            <label>Name <input type="text" name="name" required></label>
+                            <button class="next">Next</button>
+                        </div>
+                        <div class="step" data-step="2">
+                            <h4>Step 2: dates</h4>
+                            <label>Start <input type="date" name="start" required></label>
+                            <label>End <input type="date" name="end" required></label>
+                            <button class="prev">Back</button>
+                            <button class="next">Next</button>
+                        </div>
+                        <div class="step" data-step="3">
+                            <h4>Step 3: budget</h4>
+                            <label>Budget <input type="number" name="budget" required></label>
+                            <button class="prev">Back</button>
+                            <button type="submit">Finish</button>
+                        </div>
+                    </form>
+                    <pre id="wizard-output"></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="menu.js"></script>
+<script src="wizard.js"></script>
+</body>
+</html>

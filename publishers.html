@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publishers</title>
+    <link rel="stylesheet" href="style/css/default.css">
+    <style>
+        .navbar { width: 180px; }
+    </style>
+</head>
+<body class="demo">
+<div id="wrapper" class="open">
+    <div class="navbar">
+        <ul class="nav">
+            <li class="dashboard"><a href="dashboard.html" class="menuItem"><span>Dashboard</span></a></li>
+            <li class="directDemand"><a href="demand.html" class="menuItem"><span>Demand</span></a></li>
+            <li class="publishers"><a href="publishers.html" class="menuItem"><span>Publishers</span></a></li>
+            <li class="add"><a href="add-campaign.html" class="menuItem"><span>Add campaign</span></a></li>
+            <li class="wizard"><a href="campaign-wizard.html" class="menuItem"><span>Wizard</span></a></li>
+            <li class="graphs"><a href="graphs.html" class="menuItem"><span>Graphs</span></a></li>
+        </ul>
+    </div>
+    <div id="content">
+        <div class="top-navigation">
+            <div id="menu-opener"></div>
+        </div>
+        <div class="span100">
+            <div class="widget">
+                <div class="widget-header">
+                    <h3>Publishers</h3>
+                </div>
+                <div class="widget-content">
+                    <table id="publishers-table" class="table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Publisher</th>
+                                <th>Type</th>
+                                <th>Account manager</th>
+                                <th class="right">Websites</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="menu.js"></script>
+<script src="publishers.js"></script>
+</body>
+</html>
